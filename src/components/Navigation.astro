@@ -1,0 +1,38 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+const onBlog = currentPath.includes("posts") || currentPath === "blog/";
+---
+
+<ul>
+  <li class={currentPath === "" ? "active" : ""}><a href="/">Home</a></li>
+  <li class={currentPath === "about/" ? "active" : ""}>
+    <a href="/about/">About</a>
+  </li>
+  <li class={currentPath === "contact/" ? "active" : ""}>
+    <a href="/contact/">Contact</a>
+  </li>
+  <li class={onBlog ? "active" : ""}>
+    <a href="/blog/">Blog</a>
+  </li>
+</ul>
+
+<style lang="sass">
+  .active a
+    font-weight: bold
+    text-decoration: underline
+  ul
+    display: flex
+    list-style-type: none
+    margin-block-start: 0em
+    padding-inline-start: 0em
+
+    li
+      padding: 0.25rem
+      text-decoration: none
+
+  a
+    text-decoration: none
+    &:visited
+      color: inherit
+</style>

@@ -1,0 +1,30 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+const postDate = new Date(frontmatter.pubDate).toLocaleDateString();
+---
+
+<BaseLayout>
+  <article>
+    <header>
+      <h3>{frontmatter.title}</h3>
+      <p><strong>Written by:</strong> {frontmatter.author}</p>
+      <p>
+        <strong>Published:</strong>
+        <time datetime={frontmatter.pubDate}>{postDate}</time>
+      </p>
+    </header>
+    <slot />
+  </article>
+</BaseLayout>
+
+<style>
+  header {
+    border-bottom: 0.05em dashed;
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-left: 8px;
+  }
+</style>

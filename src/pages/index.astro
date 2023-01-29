@@ -1,15 +1,27 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Home";
+import chris from "../images/chris.jpg";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <div class="homePage">
+    <aside>
+      <img alt="Image of Chris, zoomed in on the forehead" src={chris} />
+    </aside>
+    <section>
+      <h3>👋 Hi there, I'm Chris</h3>
+      <p>I write books. Before that I got kids into colleges.</p>
+    </section>
+  </div>
+
+  <style>
+    .homePage {
+      display: flex;
+    }
+
+    section {
+      padding: 0 1em;
+    }
+  </style>
+</BaseLayout>
