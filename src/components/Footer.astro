@@ -1,34 +1,35 @@
 ---
 const date = new Date().getFullYear();
+import twitter from "../images/icons/twitter.svg";
 ---
 
 <footer class="siteFooter">
   <div>© {date} Christopher Zombik</div>
   <div class="siteFooter-icons">
     <a href="https://twitter.com/chriszombik">
-      <span class="fa-brands fa-twitter" title="Link to my twitter"></span>
-      <span class="fa-sr-only">Link to my Twitter</span>
+      <img class="twitterIcon" src={twitter} alt="Twitter logo" />
     </a>
-    <a href="https://www.linkedin.com/in/christopher-zombik-5b085324/">
-      <span class="fa-brands fa-linkedin" title="Link to my LinkedIn"></span>
-      <span class="fa-sr-only">Link to my LinkedIn</span>
-    </a>
+
+    <style>
+      .siteFooter {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .siteFooter-icons {
+        margin-left: auto;
+      }
+
+      a,
+      a:visited {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .twitterIcon {
+        height: 16px;
+        width: 16px;
+      }
+    </style>
   </div>
 </footer>
-
-<style>
-  .siteFooter {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .siteFooter-icons {
-    margin-left: auto;
-  }
-
-  a,
-  a:visited {
-    color: inherit;
-    text-decoration: none;
-  }
-</style>

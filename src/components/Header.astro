@@ -6,5 +6,18 @@ import Navigation from "../components/Navigation.astro";
   <div>
     <h1>Chris Zombik</h1>
   </div>
-  <Navigation />
+  <div class="navLinks">
+    <Navigation />
+  </div>
 </header>
+
+<style>
+  .siteHeader {
+    display: flex;
+    justify-content: end;
+  }
+
+  .navLinks {
+    margin-left: auto;
+  }
+</style>
