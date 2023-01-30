@@ -559,10 +559,26 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@example/minimal@workspace:."
   dependencies:
+    "@fontsource/merriweather": ^4.5.14
+    "@fontsource/montserrat": ^4.5.14
     astro: ^2.0.2
     sass: ^1.57.1
   languageName: unknown
   linkType: soft
+
+"@fontsource/merriweather@npm:^4.5.14":
+  version: 4.5.14
+  resolution: "@fontsource/merriweather@npm:4.5.14"
+  checksum: c91aca76c8a5e1fb1e7c0d31b064d7b1f8f0eb9c80d0d17a6f7dcd466074dddf62956009377e2429843ca282b404f98df68c5afe2d941d08d1d9a33cb4a3b3c5
+  languageName: node
+  linkType: hard
+
+"@fontsource/montserrat@npm:^4.5.14":
+  version: 4.5.14
+  resolution: "@fontsource/montserrat@npm:4.5.14"
+  checksum: c5ee54bdc7abb378240d613a0dd59ce4879bdfbe6c5168b324245dd3e031a410e321289bf9be614265e16d7319f16d39090b8f00f54e631c6d35e9cb2f8d652a
+  languageName: node
+  linkType: hard
 
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3

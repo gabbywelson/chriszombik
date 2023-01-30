@@ -11,6 +11,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/merriweather": "^4.5.14",
+    "@fontsource/montserrat": "^4.5.14",
     "astro": "^2.0.2",
     "sass": "^1.57.1"
   }

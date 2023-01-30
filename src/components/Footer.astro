@@ -3,6 +3,32 @@ const date = new Date().getFullYear();
 ---
 
 <footer class="siteFooter">
-  <hr />
-  <p>© {date} Christopher Zombik</p>
+  <div>© {date} Christopher Zombik</div>
+  <div class="siteFooter-icons">
+    <a href="https://twitter.com/chriszombik">
+      <span class="fa-brands fa-twitter" title="Link to my twitter"></span>
+      <span class="fa-sr-only">Link to my Twitter</span>
+    </a>
+    <a href="https://www.linkedin.com/in/christopher-zombik-5b085324/">
+      <span class="fa-brands fa-linkedin" title="Link to my LinkedIn"></span>
+      <span class="fa-sr-only">Link to my LinkedIn</span>
+    </a>
+  </div>
 </footer>
+
+<style>
+  .siteFooter {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .siteFooter-icons {
+    margin-left: auto;
+  }
+
+  a,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+</style>

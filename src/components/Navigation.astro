@@ -18,20 +18,23 @@ const onBlog = currentPath.includes("posts") || currentPath === "blog/";
 </ul>
 
 <style lang="sass">
-  .active a
+  .active
     font-weight: bold
     text-decoration: underline
+
   ul
     display: flex
     list-style-type: none
     margin-block-start: 0em
     padding-inline-start: 0em
+    font-family: "Montserrat", sans-serif
 
-    li
-      padding: 0.25rem
-      text-decoration: none
+  li
+    padding: 0.25rem
+    text-decoration: none
 
   a
+    color: inherit
     text-decoration: none
     &:visited
       color: inherit

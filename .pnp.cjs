@@ -28,6 +28,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@fontsource/merriweather", "npm:4.5.14"],\
+            ["@fontsource/montserrat", "npm:4.5.14"],\
             ["astro", "npm:2.0.2"],\
             ["sass", "npm:1.57.1"]\
           ],\
@@ -718,10 +720,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@example/minimal", "workspace:."],\
+            ["@fontsource/merriweather", "npm:4.5.14"],\
+            ["@fontsource/montserrat", "npm:4.5.14"],\
             ["astro", "npm:2.0.2"],\
             ["sass", "npm:1.57.1"]\
           ],\
           "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@fontsource/merriweather", [\
+        ["npm:4.5.14", {\
+          "packageLocation": "./.yarn/cache/@fontsource-merriweather-npm-4.5.14-f76ee662c1-c91aca76c8.zip/node_modules/@fontsource/merriweather/",\
+          "packageDependencies": [\
+            ["@fontsource/merriweather", "npm:4.5.14"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@fontsource/montserrat", [\
+        ["npm:4.5.14", {\
+          "packageLocation": "./.yarn/cache/@fontsource-montserrat-npm-4.5.14-424dfc1503-c5ee54bdc7.zip/node_modules/@fontsource/montserrat/",\
+          "packageDependencies": [\
+            ["@fontsource/montserrat", "npm:4.5.14"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@gar/promisify", [\
