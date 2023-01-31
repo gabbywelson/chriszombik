@@ -4,7 +4,9 @@ import Navigation from "../components/Navigation.astro";
 
 <header class="siteHeader">
   <div>
-    <h1>Chris Zombik</h1>
+    <a class="homeLink" href="/">
+      <h1 class="siteTitle">Chris Zombik</h1>
+    </a>
   </div>
   <div class="navLinks">
     <Navigation />
@@ -19,5 +21,15 @@ import Navigation from "../components/Navigation.astro";
 
   .navLinks {
     margin-left: auto;
+  }
+
+  .siteTitle {
+    font-variant: small-caps;
+  }
+
+  .homeLink,
+  .homeLink:visited {
+    text-decoration: none;
+    color: inherit;
   }
 </style>
