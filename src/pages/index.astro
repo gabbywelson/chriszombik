@@ -2,26 +2,58 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Home";
 import chris from "../images/chris.jpg";
+import Placeholder from "../images/Placeholder.jpg";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="homePage">
     <aside>
-      <img alt="Image of Chris, zoomed in on the forehead" src={chris} />
+      <h3>Upcoming Book</h3>
+      <img src={Placeholder} />
+      <p>Doot doot doot lorem ipsum</p>
     </aside>
     <section>
       <h3>👋 Hi there, I'm Chris</h3>
-      <p>I write books. Before that I got kids into colleges.</p>
+      <p>
+        Chris Zombik is a fantasy author in the process of publishing his first
+        novel. He attended Columbia University where he studied Sociology. After
+        this, he lived in Shanghai, China for 5 years while working as an
+        education consultant, helping students attend universities in the U.S.
+      </p>
+      <p>
+        Creative writing has been a longtime passion, going back to the highly
+        selective Writer's Workshop series offered at Chris's high school. After
+        writing numerous short fiction pieces and competing in the prestigious
+        <a href="http://www.3daynovel.com">Three-Day Novel Contest</a> multiple times.
+      </p>
+      <h3>Recent blog posts</h3>
+      <ul>
+        <li>
+          <a href="/posts/hello-world">Hello World</a>
+        </li>
+      </ul>
     </section>
   </div>
 
   <style>
     .homePage {
       display: flex;
+      margin-top: 24px;
     }
 
     section {
       padding: 0 1em;
+    }
+
+    img {
+      max-width: 400px;
+    }
+
+    h3 {
+      padding: 12px 0;
+    }
+    p {
+      padding: 8px 0;
     }
   </style>
 </BaseLayout>

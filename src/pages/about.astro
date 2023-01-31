@@ -1,8 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About";
+import chris from "../images/chris.jpg";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>About me</p>
+  <h3>About me</h3>
+  <img src={chris} alt="A close up view of Chris's forehead and hair" />
+  <p>It's chris</p>
 </BaseLayout>
