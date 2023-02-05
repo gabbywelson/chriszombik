@@ -50,10 +50,7 @@ select {
 
 /* From: https://www.swyx.io/css-100-bytes */
 html, body {
-  /* max-width: 90ch;
-  padding: 3em 1em;
-  margin: auto; */
-  line-height: 1.75;
+  line-height: 1.5;
   font-size: 1em;
   font-family: "Playfair Display", serif;
   height: 100%
