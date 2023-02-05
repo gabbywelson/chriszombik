@@ -2,34 +2,45 @@
 import Navigation from "../components/Navigation.astro";
 ---
 
-<header class="siteHeader">
-  <div>
-    <a class="homeLink" href="/">
-      <h1 class="siteTitle">Chris Zombik</h1>
-    </a>
-  </div>
-  <div class="navLinks">
-    <Navigation />
-  </div>
+<header>
+  <section class="siteHeader">
+    <div>
+      <a class="homeLink" href="/">
+        <h1 class="siteTitle">Chris Zombik</h1>
+      </a>
+    </div>
+    <div class="navLinks">
+      <Navigation />
+    </div>
+  </section>
+  <hr />
 </header>
 
 <style>
   .siteHeader {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
   .navLinks {
     margin-left: auto;
+    margin-top: auto;
   }
 
   .siteTitle {
     font-variant: small-caps;
+    font-size: 24pt;
+    font-weight: bold;
   }
 
   .homeLink,
   .homeLink:visited {
     text-decoration: none;
     color: inherit;
+  }
+
+  hr {
+    margin-top: 4px;
+    margin-bottom: 16px;
   }
 </style>
