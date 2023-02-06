@@ -14,10 +14,14 @@ const blogEntries = await getCollection("blog");
         .slice(0, 3)
         .map((blogPostEntry) => (
           <li>
-            <a href={`/posts/${blogPostEntry.slug}`}>
+            <a class="titleLink" href={`/posts/${blogPostEntry.slug}`}>
               {blogPostEntry.data.title}
             </a>
-            <time datetime={blogPostEntry.data.pubDate.toISOString()}>
+            <span> ~ </span>
+            <time
+              class="postedDate"
+              datetime={blogPostEntry.data.pubDate.toISOString()}
+            >
               {blogPostEntry.data.pubDate.toDateString()}
             </time>
           </li>
@@ -27,6 +31,11 @@ const blogEntries = await getCollection("blog");
 </section>
 
 <style>
+  .titleLink {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
   h3 {
     padding: 12px 0;
     font-weight: bold;

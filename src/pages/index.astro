@@ -21,12 +21,13 @@ import SignupForm from "../components/SignupForm.astro";
           editors, and beta readers.
         </p>
       </div>
+      <img class="authorPhoto" src={chris} alt="a picture of the author" />
     </div>
     <SignupForm />
     <RecentPosts />
   </section>
   <aside>
-    <img src={chris} alt="a picture of the author" />
+    <img class="authorPhoto" src={chris} alt="a picture of the author" />
     <UpcomingBook />
   </aside>
 </BaseLayout>
@@ -36,13 +37,23 @@ import SignupForm from "../components/SignupForm.astro";
     margin-left: 4em;
   }
 
-  img {
+  .authorPhoto {
     max-width: 150px;
     border-radius: 100%;
   }
 
   .welcome {
     display: flex;
+  }
+
+  .welcome .authorPhoto {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
   }
 
   .intro {
@@ -61,5 +72,38 @@ import SignupForm from "../components/SignupForm.astro";
   .subIntro {
     font-style: italic;
     font-size: 14pt;
+  }
+
+  .caption {
+    font-style: italic;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 680px) {
+    aside {
+      margin-left: 1em;
+    }
+
+    aside .authorPhoto {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    .welcome .authorPhoto {
+      clip: none;
+      clip-path: none;
+      height: 100%;
+      overflow: auto;
+      position: inherit;
+      white-space: normal;
+      width: 100%;
+      max-width: 175px;
+      min-width: 100px;
+      margin-left: 1em;
+    }
   }
 </style>
