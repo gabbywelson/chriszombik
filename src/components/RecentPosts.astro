@@ -1,12 +1,28 @@
 ---
+import { getCollection } from "astro:content";
+const blogEntries = await getCollection("blog");
 ---
 
 <section>
   <h3>Recent Blog Posts</h3>
-  <ul>
-    <li>
-      <a href="/posts/hello-world">Hello World</a>
-    </li>
+  <p>Here are a few of my most recent posts.</p>
+  <p>You can see the rest over on my <a href="/blog">blog page</a></p>
+  <ul class="postList" role="list">
+    {
+      blogEntries
+        .reverse()
+        .slice(0, 3)
+        .map((blogPostEntry) => (
+          <li>
+            <a href={`/posts/${blogPostEntry.slug}`}>
+              {blogPostEntry.data.title}
+            </a>
+            <time datetime={blogPostEntry.data.pubDate.toISOString()}>
+              {blogPostEntry.data.pubDate.toDateString()}
+            </time>
+          </li>
+        ))
+    }
   </ul>
 </section>
 
@@ -14,8 +30,8 @@
   h3 {
     padding: 12px 0;
     font-weight: bold;
-    color: midnightblue;
-    border-bottom: 1px solid rgba(152, 134, 230, 0.4);
+    color: var(--old-lavender);
+    border-bottom: 1px solid hsla(251, 10%, 42%, 0.4);
     margin-bottom: 1em;
     padding-bottom: 0.25em;
     font-variant: small-caps;
@@ -23,5 +39,14 @@
 
   section {
     padding: 1em;
+  }
+
+  .postList {
+    margin: 1em 0 1em 0.5em;
+  }
+
+  .postList li {
+    list-style-type: circle;
+    list-style-position: inside;
   }
 </style>

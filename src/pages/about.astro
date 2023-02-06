@@ -5,7 +5,34 @@ import chris from "../images/chris.jpg";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h3>About me</h3>
-  <img src={chris} alt="A close up view of Chris's forehead and hair" />
-  <p>It's chris</p>
+  <div class="bio">
+    <p>
+      Chris Zombik is a fiction author and blogger in the process of publishing
+      his first novel. He attended Columbia University where he studied
+      Sociology. After this, he lived in Shanghai, China for 5 years while
+      working as an education consultant, helping students apply to and prepare
+      for success at universities in the U.S.
+    </p>
+    <p>
+      Creative writing has been a longtime passion, going back to the highly
+      selective Writer's Workshop series offered at Chris's high school. After
+      writing numerous short fiction pieces and competing in the prestigious
+      <a href="http://www.3daynovel.com">Three-Day Novel Contest</a> multiple times.
+    </p>
+    <p>
+      In his spare time, Chris enjoys GM'ing and playing in tabletop games,
+      sampling the Boston area's cuisine, and daydreaming about his next great
+      story to tell
+    </p>
+  </div>
 </BaseLayout>
+
+<style>
+  .bio {
+    padding-top: 2em;
+  }
+
+  .bio p {
+    margin: 1.5em 0em;
+  }
+</style>

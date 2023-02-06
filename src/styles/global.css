@@ -1,3 +1,12 @@
+/* CSS HSL */
+:root {
+  --persian-green: hsla(173, 70%, 35%, 1);
+  --magnolia: hsla(270, 100%, 97%, 1);
+  --thistle: hsla(266, 67%, 88%, 1);
+  --old-lavender: hsla(251, 10%, 42%, 1);
+  --dark-liver: hsla(280, 6%, 32%, 1);
+}
+
 /* Box sizing rules */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -70,6 +79,15 @@ body {
 
 body > * {
   grid-column: 2;
+}
+
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / 4;
+}
+
+.background-fill {
+ background: radial-gradient(circle, rgba(247,239,255,1) 0%, rgba(221,203,244,1) 50%, rgba(100,96,117,1) 100%);
 }
 
 main {

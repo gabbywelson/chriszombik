@@ -2,24 +2,35 @@
 import Navigation from "../components/Navigation.astro";
 ---
 
-<header>
+<header class="full-bleed background-fill">
   <section class="siteHeader">
-    <div>
+    <div class="siteTitle">
       <a class="homeLink" href="/">
-        <h1 class="siteTitle">Chris Zombik</h1>
+        <h1>Chris Zombik</h1>
       </a>
+      <h2>Author & Educator</h2>
     </div>
     <div class="navLinks">
       <Navigation />
     </div>
   </section>
-  <hr />
 </header>
 
 <style>
+  header {
+    display: grid;
+    grid-template-columns:
+      1fr
+      min(90ch, 100%)
+      1fr;
+    margin-top: 1em;
+    border-top: 1px solid var(--dark-liver);
+    border-bottom: 1px solid var(--dark-liver);
+  }
   .siteHeader {
     display: flex;
     justify-content: flex-end;
+    grid-column-start: 2;
   }
 
   .navLinks {
@@ -27,20 +38,23 @@ import Navigation from "../components/Navigation.astro";
     margin-top: auto;
   }
 
-  .siteTitle {
+  h1 {
     font-variant: small-caps;
     font-size: 24pt;
     font-weight: bold;
+  }
+
+  h2 {
+    font-style: italic;
+  }
+
+  .siteTitle {
+    margin-top: auto;
   }
 
   .homeLink,
   .homeLink:visited {
     text-decoration: none;
     color: inherit;
-  }
-
-  hr {
-    margin-top: 4px;
-    margin-bottom: 16px;
   }
 </style>
