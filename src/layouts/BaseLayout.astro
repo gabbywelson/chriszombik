@@ -12,9 +12,9 @@ const { pageTitle } = Astro.props;
     <Meta />
     <title>{pageTitle}</title>
   </head>
-  <body class="flex flex-col min-h-screen">
+  <body class="flex flex-col min-h-screen md:max-w-[90ch] md:m-auto">
     <Header />
-    <main class="flex flex-col md:mt-4 md:flex-row md:max-w-[90ch] md:m-auto">
+    <main class="flex flex-col px-2 md:px-0 md:mt-4 md:flex-row">
       <slot />
     </main>
     <Footer />

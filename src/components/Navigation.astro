@@ -4,7 +4,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
 const onBlog = currentPath.includes("posts") || currentPath === "blog/";
 ---
 
-<ul class="flex font-sans gap-0.5">
+<ul class="flex justify-center font-sans gap-0.5">
   <li class={currentPath === "" ? "underline p-1" : "p-1"}>
     <a href="/">Home</a>
   </li>

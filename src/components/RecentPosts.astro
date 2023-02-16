@@ -24,10 +24,7 @@ const blogEntries = await getCollection("blog");
               {blogPostEntry.data.title}
             </a>
             <span> ~ </span>
-            <time
-              class="postedDate"
-              datetime={blogPostEntry.data.pubDate.toISOString()}
-            >
+            <time datetime={blogPostEntry.data.pubDate.toISOString()}>
               {blogPostEntry.data.pubDate.toDateString()}
             </time>
           </li>
