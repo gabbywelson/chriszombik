@@ -1,16 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About";
-import aboutPhoto from "../images/about_img.jpeg";
+import tall_photo from "../images/tall_photo.jpeg";
+//       alt="Chris sitting in front of a background of green foliage with a low stone wall. He is wearing a white dress shirt with the sleeves rolled up, and has his chin resting on one hand"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class="bio">
-    <img
-      src={aboutPhoto}
-      alt="Chris sitting in front of a background of green foliage with a low stone wall. He is wearing a white dress shirt with the sleeves rolled up, and has his chin resting on one hand"
-    />
-    <p>
+  <div class="pt-4 flex flex-col md:flex-row">
+    <img class="max-w-s mx-3 md:max-h-96" src={tall_photo} />
+    <p class="prose">
       Chris is a writer and independent educational consultant. He previously
       lived and worked in Shanghai, China, where he attended the Shanghai
       Writing Workshop. He has written numerous science fiction stories,
@@ -22,23 +20,3 @@ import aboutPhoto from "../images/about_img.jpeg";
     </p>
   </div>
 </BaseLayout>
-
-<style>
-  .bio {
-    padding-top: 2em;
-  }
-
-  .bio p {
-    margin: 1.5em 0em;
-  }
-
-  img {
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  p {
-    font-size: 1.2em;
-  }
-</style>

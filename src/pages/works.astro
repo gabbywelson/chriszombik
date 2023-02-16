@@ -1,8 +1,40 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Works";
+import { getCollection } from "astro:content";
+const works = await getCollection("works");
+console.log(works);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>Upcoming selected works list</h1>
+  <div class="w-full h-full">
+    <h2
+      class="font-bold text-xl mb-4 pb-0.5 mb-1 border-b-2 border-b-slate-200"
+    >
+      Selected Works
+    </h2>
+    <ul role="list">
+      {
+        works.map((selectedWork) => (
+          <li class="border-4 rounded-lg border-slate-700 bg-slate-200 p-4">
+            <div class="mb-2">
+              <a
+                class="font-bold underline text-lg"
+                href={`/posts/${selectedWork.slug}`}
+              >
+                {selectedWork.data.title}
+              </a>
+              <span> ~ </span>
+              <time datetime={selectedWork.data.pubDate.toISOString()}>
+                {selectedWork.data.pubDate.toDateString()}
+              </time>
+            </div>
+            <p>
+              <em>{selectedWork.body.substring(0, 500)}...</em>
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </BaseLayout>

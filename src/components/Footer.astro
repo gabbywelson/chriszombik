@@ -3,33 +3,16 @@ const date = new Date().getFullYear();
 import twitter from "../images/icons/twitter.svg";
 ---
 
-<footer class="siteFooter">
-  <div>© {date} Christopher Zombik</div>
-  <div class="siteFooter-icons">
-    <a href="https://twitter.com/chriszombik">
-      <img class="twitterIcon" src={twitter} alt="Twitter logo" />
+<footer
+  class="flex flex-col md:flex-row mb-1 md:max-w-[90ch] md:w-[90ch] md:m-auto"
+>
+  <div class="flex">
+    <div>© {date} Christopher Zombik</div>
+    <a class="ml-1" href="https://twitter.com/chriszombik">
+      <img class="h-4 w-4" src={twitter} alt="Twitter logo" />
     </a>
-    <style>
-      .siteFooter {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 1em;
-      }
-
-      .siteFooter-icons {
-        margin-left: auto;
-      }
-
-      a,
-      a:visited {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .twitterIcon {
-        height: 16px;
-        width: 16px;
-      }
-    </style>
+  </div>
+  <div class="md:ml-auto">
+    Designed by <a href="https://welson.net">Garrett Welson</a>
   </div>
 </footer>

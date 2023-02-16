@@ -3,25 +3,27 @@ import { getCollection } from "astro:content";
 const blogEntries = await getCollection("blog");
 ---
 
-<section>
-  <h3>Recent Blog Posts</h3>
+<section class="p1">
+  <h3 class="font-bold pt-3 pb-0.5 mb-1 border-b-2 border-b-slate-200">
+    Recent Blog Posts
+  </h3>
   <p>Here are a few of my most recent posts.</p>
   <p>You can see the rest over on my <a href="/blog">blog page</a></p>
-  <ul class="postList" role="list">
+  <ul class="my1 ml-0.5" role="list">
     {
       blogEntries
         .reverse()
         .slice(0, 3)
         .map((blogPostEntry) => (
-          <li>
-            <a class="titleLink" href={`/posts/${blogPostEntry.slug}`}>
+          <li class="list-disc list-inside">
+            <a
+              class="font-bold underline"
+              href={`/posts/${blogPostEntry.slug}`}
+            >
               {blogPostEntry.data.title}
             </a>
             <span> ~ </span>
-            <time
-              class="postedDate"
-              datetime={blogPostEntry.data.pubDate.toISOString()}
-            >
+            <time datetime={blogPostEntry.data.pubDate.toISOString()}>
               {blogPostEntry.data.pubDate.toDateString()}
             </time>
           </li>
@@ -29,29 +31,3 @@ const blogEntries = await getCollection("blog");
     }
   </ul>
 </section>
-
-<style>
-  .titleLink {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  h3 {
-    padding: 12px 0;
-    font-weight: bold;
-    color: var(--old-lavender);
-    border-bottom: 1px solid hsla(251, 10%, 42%, 0.4);
-    margin-bottom: 1em;
-    padding-bottom: 0.25em;
-    font-variant: small-caps;
-  }
-
-  .postList {
-    margin: 1em 0 1em 0.5em;
-  }
-
-  .postList li {
-    list-style-type: circle;
-    list-style-position: inside;
-  }
-</style>

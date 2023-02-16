@@ -4,36 +4,21 @@ import Footer from "../components/Footer.astro";
 import Meta from "../components/Meta.astro";
 import "@fontsource/playfair-display";
 import "@fontsource/inter";
-import "../styles/global.css";
-const { pageTitle } = Astro.props;
+const { pageTitle, customClass } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="h-full font-serif min-h-screen">
   <head>
     <Meta />
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body class="flex flex-col min-h-screen md:max-w-[90ch] md:m-auto">
     <Header />
-    <main>
+    <main
+      class={"flex flex-col px-2 md:px-0 md:mt-4 md:flex-row " + customClass}
+    >
       <slot />
     </main>
     <Footer />
-    <!-- <script>
-      import "../scripts/menu.js";
-    </script> -->
-    <style>
-      main {
-        display: flex;
-        margin-top: 24px;
-        flex-direction: row;
-      }
-
-      @media screen and (min-width: 320px) and (max-width: 680px) {
-        main {
-          flex-direction: column;
-        }
-      }
-    </style>
   </body>
 </html>

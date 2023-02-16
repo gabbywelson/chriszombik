@@ -6,19 +6,30 @@ const blogEntries = await getCollection("blog");
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h3>Post Archive</h3>
-  <ul>
-    {
-      blogEntries.map((blogPostEntry) => (
-        <li>
-          <a href={`/posts/${blogPostEntry.slug}`}>
-            {blogPostEntry.data.title}
-          </a>
-          <time datetime={blogPostEntry.data.pubDate.toISOString()}>
-            {blogPostEntry.data.pubDate.toDateString()}
-          </time>
-        </li>
-      ))
-    }
-  </ul>
+  <div class="w-full h-full">
+    <h2 class="font-bold pb-0.5 mb-1 border-b-2 border-b-slate-200">
+      All Posts
+    </h2>
+    <ul role="list" class="list-disc list-inside">
+      {
+        blogEntries.map((blogPostEntry) => (
+          <li>
+            <a
+              class="font-bold underline"
+              href={`/posts/${blogPostEntry.slug}`}
+            >
+              {blogPostEntry.data.title}
+            </a>
+            <span>
+              (Posted on
+              <time datetime={blogPostEntry.data.pubDate.toISOString()}>
+                {blogPostEntry.data.pubDate.toDateString()}
+              </time>
+              )
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </BaseLayout>

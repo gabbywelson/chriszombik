@@ -1,107 +1,25 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Home";
-import chris from "../images/home_photo.jpeg";
+import wide_photo from "../images/wide_photo.jpeg";
 import RecentPosts from "../components/RecentPosts.astro";
-import SignupForm from "../components/SignupForm.astro";
 import UpcomingBook from "../components/UpcomingBook.astro";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <section>
-    <div class="welcome">
-      <div class="intro">
-        <h3>Hi there, I'm Chris Zombik!</h3>
-        <p class="subIntro">
-          I'm excited to introduce you to my books and writing
-        </p>
-        <p>
-          My first novel is (very nearly!) finished and I'm especially
-          interested in connecting with literary agents, fellow novelists,
-          editors, and beta readers.
-        </p>
-      </div>
-      <img class="authorPhoto" src={chris} alt="a picture of the author" />
+  <div class="p1">
+    <div class="prose">
+      <p>I'm excited to introduce you to my books and writing</p>
+      <p>
+        My first novel is (very nearly!) finished and I'm especially interested
+        in connecting with literary agents, fellow novelists, editors, and beta
+        readers.
+      </p>
     </div>
-    <!-- <SignupForm /> -->
-    <RecentPosts />
-  </section>
-  <aside>
-    <img class="authorPhoto" src={chris} alt="a picture of the author" />
+    <img class="max-w-lg" src={wide_photo} alt="a picture of the author" />
+  </div>
+  <aside class="md:ml-8 md:max-w-md">
     <UpcomingBook />
+    <RecentPosts />
   </aside>
 </BaseLayout>
-
-<style>
-  aside {
-    margin-left: 4em;
-  }
-
-  .authorPhoto {
-    max-width: 175px;
-    padding-left: 1em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .welcome {
-    display: flex;
-  }
-
-  .welcome .authorPhoto {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-
-  .intro h3 {
-    font-weight: bold;
-    font-size: 20pt;
-  }
-
-  .intro p {
-    font-size: 16pt;
-  }
-
-  .subIntro {
-    font-style: italic;
-    font-size: 14pt;
-  }
-
-  .caption {
-    font-style: italic;
-  }
-
-  @media screen and (min-width: 320px) and (max-width: 680px) {
-    aside {
-      margin-left: 1em;
-    }
-
-    aside .authorPhoto {
-      clip: rect(0 0 0 0);
-      clip-path: inset(50%);
-      height: 1px;
-      overflow: hidden;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-    }
-
-    .welcome .authorPhoto {
-      clip: none;
-      clip-path: none;
-      height: 100%;
-      overflow: auto;
-      position: inherit;
-      white-space: normal;
-      width: 100%;
-      max-width: 175px;
-      min-width: 100px;
-      margin-left: 1em;
-    }
-  }
-</style>
