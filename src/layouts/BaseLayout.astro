@@ -4,7 +4,7 @@ import Footer from "../components/Footer.astro";
 import Meta from "../components/Meta.astro";
 import "@fontsource/playfair-display";
 import "@fontsource/inter";
-const { pageTitle } = Astro.props;
+const { pageTitle, customClass } = Astro.props;
 ---
 
 <html lang="en" class="h-full font-serif min-h-screen">
@@ -14,7 +14,9 @@ const { pageTitle } = Astro.props;
   </head>
   <body class="flex flex-col min-h-screen md:max-w-[90ch] md:m-auto">
     <Header />
-    <main class="flex flex-col px-2 md:px-0 md:mt-4 md:flex-row">
+    <main
+      class={"flex flex-col px-2 md:px-0 md:mt-4 md:flex-row " + customClass}
+    >
       <slot />
     </main>
     <Footer />
