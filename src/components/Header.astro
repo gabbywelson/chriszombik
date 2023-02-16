@@ -2,8 +2,8 @@
 import Navigation from "../components/Navigation.astro";
 ---
 
-<header class="full-bleed background-fill">
-  <section class="siteHeader">
+<header class="bg-header">
+  <section class="siteHeader max-w-[90ch] m-auto">
     <div class="siteTitle">
       <a class="homeLink" href="/">
         <h1>Chris Zombik</h1>
@@ -17,11 +17,6 @@ import Navigation from "../components/Navigation.astro";
 
 <style>
   header {
-    display: grid;
-    grid-template-columns:
-      1fr
-      min(90ch, 100%)
-      1fr;
     margin-top: 1em;
     border-top: 1px solid var(--dark-liver);
     border-bottom: 1px solid var(--dark-liver);
