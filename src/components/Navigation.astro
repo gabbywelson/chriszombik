@@ -4,41 +4,20 @@ const currentPath = pathname.slice(1); // remove the first "/"
 const onBlog = currentPath.includes("posts") || currentPath === "blog/";
 ---
 
-<ul>
-  <li class={currentPath === "" ? "active" : ""}><a href="/">Home</a></li>
-  <li class={currentPath === "about/" ? "active" : ""}>
+<ul class="flex font-sans gap-0.5">
+  <li class={currentPath === "" ? "underline p-1" : "p-1"}>
+    <a href="/">Home</a>
+  </li>
+  <li class={currentPath === "about/" ? "underline p-1" : "p-1"}>
     <a href="/about/">About</a>
   </li>
-  <li class={onBlog ? "active" : ""}>
+  <li class={onBlog ? "underline p-1" : "p-1"}>
     <a href="/blog/">Blog</a>
   </li>
-  <li class={currentPath === "works/" ? "active" : ""}>
+  <li class={currentPath === "works/" ? "underline p-1" : "p-1"}>
     <a href="/works/">Selected Works</a>
   </li>
-  <li class={currentPath === "contact/" ? "active" : ""}>
+  <li class={currentPath === "contact/" ? "underline p-1" : "p-1"}>
     <a href="/contact/">Contact</a>
   </li>
 </ul>
-
-<style lang="sass">
-  .active
-    text-decoration: underline
-
-  ul
-    display: flex
-    list-style-type: none
-    margin-block-start: 0em
-    padding-inline-start: 0em
-    font-family: "Inter", sans-serif
-    gap: 0.25rem
-
-  li
-    padding: 0.25rem
-    text-decoration: none
-
-  a
-    color: inherit
-    text-decoration: none
-    &:visited
-      color: inherit
-</style>
