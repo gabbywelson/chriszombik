@@ -3,7 +3,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Works";
 import { getCollection } from "astro:content";
 const works = await getCollection("works");
-console.log(works);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
