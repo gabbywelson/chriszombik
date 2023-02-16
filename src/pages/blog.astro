@@ -6,19 +6,21 @@ const blogEntries = await getCollection("blog");
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h3>Post Archive</h3>
-  <ul>
-    {
-      blogEntries.map((blogPostEntry) => (
-        <li>
-          <a href={`/posts/${blogPostEntry.slug}`}>
-            {blogPostEntry.data.title}
-          </a>
-          <time datetime={blogPostEntry.data.pubDate.toISOString()}>
-            {blogPostEntry.data.pubDate.toDateString()}
-          </time>
-        </li>
-      ))
-    }
-  </ul>
+  <div class="w-full h-full">
+    <h2>Post Archive</h2>
+    <ul>
+      {
+        blogEntries.map((blogPostEntry) => (
+          <li>
+            <a href={`/posts/${blogPostEntry.slug}`}>
+              {blogPostEntry.data.title}
+            </a>
+            <time datetime={blogPostEntry.data.pubDate.toISOString()}>
+              {blogPostEntry.data.pubDate.toDateString()}
+            </time>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </BaseLayout>
