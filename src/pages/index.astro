@@ -1,17 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Home";
-import chris from "../images/chris.jpg";
-import UpcomingBook from "../components/UpcomingBook.astro";
+import chris from "../images/home_photo.jpeg";
 import RecentPosts from "../components/RecentPosts.astro";
 import SignupForm from "../components/SignupForm.astro";
+import UpcomingBook from "../components/UpcomingBook.astro";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <section>
     <div class="welcome">
       <div class="intro">
-        <h3>👋 Hi there, I'm Chris Zombik!</h3>
+        <h3>Hi there, I'm Chris Zombik!</h3>
         <p class="subIntro">
           I'm excited to introduce you to my books and writing
         </p>
@@ -23,7 +23,7 @@ import SignupForm from "../components/SignupForm.astro";
       </div>
       <img class="authorPhoto" src={chris} alt="a picture of the author" />
     </div>
-    <SignupForm />
+    <!-- <SignupForm /> -->
     <RecentPosts />
   </section>
   <aside>
@@ -38,8 +38,10 @@ import SignupForm from "../components/SignupForm.astro";
   }
 
   .authorPhoto {
-    max-width: 150px;
-    border-radius: 100%;
+    max-width: 175px;
+    padding-left: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .welcome {
@@ -54,10 +56,6 @@ import SignupForm from "../components/SignupForm.astro";
     position: absolute;
     white-space: nowrap;
     width: 1px;
-  }
-
-  .intro {
-    margin-left: 1em;
   }
 
   .intro h3 {

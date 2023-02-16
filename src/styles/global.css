@@ -87,7 +87,7 @@ body > * {
 }
 
 .background-fill {
- background: radial-gradient(circle, rgba(247,239,255,1) 0%, rgba(221,203,244,1) 50%, rgba(100,96,117,1) 100%);
+ background: #9bd7db
 }
 
 main {

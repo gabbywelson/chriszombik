@@ -1,24 +1,25 @@
 ---
-title: '2022: “Year of Self Love” Postscript'
-pubDate: '2023-01-3'
-description: 'Looking back at 2022'
+title: 'Boskone 60'
+pubDate: '2023-02-15'
 author: 'Chris Zombik'
 image:
     url: '/images/chris.jpg'
     alt: 'A zoomed in picture of the authors forehead'
-tags: ["themes", "year-of-self-love"]
 ---
 
-Looking back at my blog posts from last year, I realize that I didn't write anything since July.
+Like a lot of young people in the COVID-cautious states, my social life came to a near standstill. I had been living in Shanghai for almost five years before this point, and through an accident of timing found myself back together with two parents, an adult sister, two dogs, and a cat, in my parents' downsized empty-nester home in Western Massachusetts. We spent a year and a half this way. I passed the time by writing a fantasy novel.
 
-This sort of thing tends to happen with amateur blogs, for whatever reason. But rest assured, dear reader, that even though I stopped writing about it publicly, I did not give up on my 2022 yearly theme halfway through the year.
 
-In fact, I would say that the Year of Self Love was a resounding success.
+When I moved to Somerville in summer 2021, one of the first things I wanted to do was find a local writing community. A void had been created when I left behind the Shanghai Writing Workshop, which I had been attending biweekly for almost three years. I had tried joining some online writing groups during the heat of the pandemic, but the experience just wasn't the same.
 
-It would be difficult to succinctly describe why this was the case. You will have to take my word for it. Mainly, I made huge strides in improving my mental health thanks to dedicated therapists and effective medications. Also, I do yoga now. Also also, I have learned to utilize mindfulness to, if not achieve more, then at least feel better about what I am achieving. Also^3 my understanding of and attitude towards other people has improved. Also^4, my self-image and my relationship to my past mistakes has become much healthier. And so on and so forth.
 
-It is difficult to identify any clear or transferable takeaways from this experience. I would say, go to therapy mainly. Attend an 8-week mindfulness course. Get a bad case of Covid and, while it’s dissolving the grey matter in your brain, have a spiritual experience that redefines how you value your life. You know, simple stuff.
+As often seems to happen, life had other plans. My consulting business picked up substantially in fall 2021 and I put my goal of finding a writing community on hold—though I kept working on my novel. As 2022 dawned and my busy season concluded, I determined to revisit this goal more seriously. I wasn't sure where to look, or how to go about it, but I was confident I would find "my people."
 
-One thing I think is actionable is something called a “value sort” exercise. I hope to make a post about this at some point in 2023 because I found it genuinely (no pun intended) valuable.
 
-But yeah, hey, 2022, weird year for the world, but all in all a pretty good one for me. If nothing else, the hard work I did last year has set the stage for 2023 to be a great year!
+Instead, a bunch of other cool things happened that are beyond the scope of this post. By late summer 2022, I was nearing the end of my second draft of my novel, and I *really* wanted to nail this writing community thing down.
+
+
+I took to Twitter (this was before things got weird over there) and followed a bunch of authors and agents in the SFF genre in order to figure out where the action was in this field. I don't recall who exactly it was, but in Fall 2022 one of my followees mentioned that they were going to be attending something called "Boskone 60" in early 2023. I Googled it and was blown away—the community I had been looking for would be gathering in Boston, right in my backyard! I signed up for the conference in a heartbeat.
+
+
+Time passed, 2023 arrived, and this weekend I'm finally going! Though I don't know exactly what to expect, I've skimmed through the program and concluded that this conference is a *very* big undertaking. Not only will there be tons of SFF fans and writers like me in attendance, a number of authors I know will also be there, and even some big-name agents! If nothing else, by this Sunday I am confident I will have made some new friends and learned some new things about my genre, as both a fan and as a writer. 

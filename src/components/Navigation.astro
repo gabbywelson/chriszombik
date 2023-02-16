@@ -9,17 +9,19 @@ const onBlog = currentPath.includes("posts") || currentPath === "blog/";
   <li class={currentPath === "about/" ? "active" : ""}>
     <a href="/about/">About</a>
   </li>
-  <li class={currentPath === "contact/" ? "active" : ""}>
-    <a href="/contact/">Contact</a>
-  </li>
   <li class={onBlog ? "active" : ""}>
     <a href="/blog/">Blog</a>
+  </li>
+  <li class={currentPath === "works/" ? "active" : ""}>
+    <a href="/works/">Selected Works</a>
+  </li>
+  <li class={currentPath === "contact/" ? "active" : ""}>
+    <a href="/contact/">Contact</a>
   </li>
 </ul>
 
 <style lang="sass">
   .active
-    font-weight: bold
     text-decoration: underline
 
   ul

@@ -1,28 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About";
-import chris from "../images/chris.jpg";
+import aboutPhoto from "../images/about_img.jpeg";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="bio">
+    <img
+      src={aboutPhoto}
+      alt="Chris sitting in front of a background of green foliage with a low stone wall. He is wearing a white dress shirt with the sleeves rolled up, and has his chin resting on one hand"
+    />
     <p>
-      Chris Zombik is a fiction author and blogger in the process of publishing
-      his first novel. He attended Columbia University where he studied
-      Sociology. After this, he lived in Shanghai, China for 5 years while
-      working as an education consultant, helping students apply to and prepare
-      for success at universities in the U.S.
-    </p>
-    <p>
-      Creative writing has been a longtime passion, going back to the highly
-      selective Writer's Workshop series offered at Chris's high school. After
-      writing numerous short fiction pieces and competing in the prestigious
-      <a href="http://www.3daynovel.com">Three-Day Novel Contest</a> multiple times.
-    </p>
-    <p>
-      In his spare time, Chris enjoys GM'ing and playing in tabletop games,
-      sampling the Boston area's cuisine, and daydreaming about his next great
-      story to tell
+      Chris is a writer and independent educational consultant. He previously
+      lived and worked in Shanghai, China, where he attended the Shanghai
+      Writing Workshop. He has written numerous science fiction stories,
+      including two novellas for the International 3-Day Novel Contest.
+      Currently, he is editing his first novel, a work of epic fantasy, as well
+      as co-authoring the memoir of a business associate from China. In his free
+      time, Chris runs a homebrew D&D campaign, practices yoga, and watches a
+      little too much YouTube. He lives in Somerville, Massachusetts.
     </p>
   </div>
 </BaseLayout>
@@ -34,5 +30,15 @@ import chris from "../images/chris.jpg";
 
   .bio p {
     margin: 1.5em 0em;
+  }
+
+  img {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p {
+    font-size: 1.2em;
   }
 </style>
