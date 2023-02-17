@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Works";
 import { getCollection } from "astro:content";
 const works = await getCollection("works");
+import truncate from "../../utils/truncate";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -15,19 +16,25 @@ const works = await getCollection("works");
     <ul role="list">
       {
         works.map((selectedWork) => (
-          <li class="border-4 rounded-lg border-slate-700 bg-slate-200 p-4">
+          <li class="border-2 rounded-lg border-slate-500 bg-slate-100 p-4">
             <a href={`/works/${selectedWork.slug}`}>
               <div class="mb-2">
                 <span class="font-bold underline text-lg">
                   {selectedWork.data.title}
                 </span>
                 <span> ~ </span>
-                <time datetime={selectedWork.data.pubDate.toISOString()}>
+                <time
+                  class="font-light"
+                  datetime={selectedWork.data.pubDate.toISOString()}
+                >
                   {selectedWork.data.pubDate.toDateString()}
                 </time>
               </div>
               <p>
-                <em>{selectedWork.body.substring(0, 500)}...</em>
+                <em>{truncate(selectedWork.body)} (...)</em>
+              </p>
+              <p class="underline pt-2">
+                <strong>Read more</strong>
               </p>
             </a>
           </li>
