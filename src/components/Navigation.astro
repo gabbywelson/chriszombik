@@ -2,6 +2,7 @@
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 const onBlog = currentPath.includes("posts") || currentPath === "blog/";
+const onWorks = currentPath.includes("works") || currentPath === "works/";
 ---
 
 <ul class="flex justify-center font-sans gap-0.5">
@@ -14,7 +15,7 @@ const onBlog = currentPath.includes("posts") || currentPath === "blog/";
   <li class={onBlog ? "underline p-1" : "p-1"}>
     <a href="/blog/">Blog</a>
   </li>
-  <li class={currentPath === "works/" ? "underline p-1" : "p-1"}>
+  <li class={onWorks ? "underline p-1" : "p-1"}>
     <a href="/works/">Selected Works</a>
   </li>
   <li class={currentPath === "contact/" ? "underline p-1" : "p-1"}>
