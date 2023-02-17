@@ -8,7 +8,7 @@ const { pageTitle, customClass } = Astro.props;
 
 <html lang="en" class="h-full font-serif min-h-screen">
   <head>
-    <Meta />
+    <Meta title={pageTitle} />
     <title>{pageTitle}</title>
   </head>
   <body class="flex flex-col min-h-screen md:max-w-[90ch] md:m-auto">
