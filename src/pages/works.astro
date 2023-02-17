@@ -16,21 +16,20 @@ const works = await getCollection("works");
       {
         works.map((selectedWork) => (
           <li class="border-4 rounded-lg border-slate-700 bg-slate-200 p-4">
-            <div class="mb-2">
-              <a
-                class="font-bold underline text-lg"
-                href={`/works/${selectedWork.slug}`}
-              >
-                {selectedWork.data.title}
-              </a>
-              <span> ~ </span>
-              <time datetime={selectedWork.data.pubDate.toISOString()}>
-                {selectedWork.data.pubDate.toDateString()}
-              </time>
-            </div>
-            <p>
-              <em>{selectedWork.body.substring(0, 500)}...</em>
-            </p>
+            <a href={`/works/${selectedWork.slug}`}>
+              <div class="mb-2">
+                <span class="font-bold underline text-lg">
+                  {selectedWork.data.title}
+                </span>
+                <span> ~ </span>
+                <time datetime={selectedWork.data.pubDate.toISOString()}>
+                  {selectedWork.data.pubDate.toDateString()}
+                </time>
+              </div>
+              <p>
+                <em>{selectedWork.body.substring(0, 500)}...</em>
+              </p>
+            </a>
           </li>
         ))
       }
