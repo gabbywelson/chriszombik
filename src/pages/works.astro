@@ -22,13 +22,6 @@ import truncate from "../../utils/truncate";
                 <span class="font-bold underline text-lg">
                   {selectedWork.data.title}
                 </span>
-                <span> ~ </span>
-                <time
-                  class="font-light"
-                  datetime={selectedWork.data.pubDate.toISOString()}
-                >
-                  {selectedWork.data.pubDate.toDateString()}
-                </time>
               </div>
               <p>
                 <em>{truncate(selectedWork.body)}...</em>

@@ -1,12 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Home";
-import wide_photo from "../images/wide_photo.jpeg";
 import RecentPosts from "../components/RecentPosts.astro";
 import UpcomingBook from "../components/UpcomingBook.astro";
+import ShortBio from "../components/ShortBio.astro";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+  <ShortBio />
   <UpcomingBook />
   <RecentPosts />
 </BaseLayout>

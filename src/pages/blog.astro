@@ -13,20 +13,17 @@ const blogEntries = await getCollection("blog");
     <ul role="list" class="list-disc list-inside">
       {
         blogEntries.map((blogPostEntry) => (
-          <li>
-            <a
-              class="font-bold underline"
-              href={`/posts/${blogPostEntry.slug}`}
-            >
-              {blogPostEntry.data.title}
+          <li class="underline">
+            <a href={`/posts/${blogPostEntry.slug}`}>
+              <span class="font-bold">{blogPostEntry.data.title.trim()}</span>
+              <span>
+                (Posted
+                <time datetime={blogPostEntry.data.pubDate.toISOString()}>
+                  {blogPostEntry.data.pubDate.toDateString()}
+                </time>
+                )
+              </span>
             </a>
-            <span>
-              (Posted on
-              <time datetime={blogPostEntry.data.pubDate.toISOString()}>
-                {blogPostEntry.data.pubDate.toDateString()}
-              </time>
-              )
-            </span>
           </li>
         ))
       }

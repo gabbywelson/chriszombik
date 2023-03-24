@@ -17,21 +17,19 @@ const { Content } = await entry.render();
 
 <BaseLayout pageTitle={entry.data.title} customClass="justify-center">
   <article class="prose">
-    <h1 class="mb-2 font-bold text-2xl">{entry.data.title}</h1>
-    <Content />
-    <aside
-      class="border-2 border-slate-400 bg-slate-200 p-3 rounded-lg text-sm flex flex-col my-8"
-    >
-      <span class="p-1">
-        <strong>Posted on:</strong>
+    <aside>
+      <h1 class="mb-2 font-bold text-2xl">{entry.data.title}</h1>
+      <div class="italic">
+        <span>Posted:</span>
         <time datetime={entry.data.pubDate.toISOString()}>
           {entry.data.pubDate.toDateString()}
         </time>
-      </span>
-      <span class="p-1">
-        <strong>Author:</strong>
-        {entry.data.author}
-      </span>
+      </div>
+      <div class="italic">
+        Tags: {entry.data.tags.join(", ")}
+      </div>
     </aside>
+    <img src={entry.data.image.url} alt={entry.data.image.alt} />
+    <Content />
   </article>
 </BaseLayout>
