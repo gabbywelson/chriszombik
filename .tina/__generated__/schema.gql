@@ -84,6 +84,7 @@ union DocumentNode = Post
 type Post implements Node & Document {
   title: String!
   body: JSON
+  pubDate: String
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -102,9 +103,18 @@ input RichTextFilter {
   exists: Boolean
 }
 
+input DatetimeFilter {
+  after: String
+  before: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
 input PostFilter {
   title: StringFilter
   body: RichTextFilter
+  pubDate: DatetimeFilter
 }
 
 type PostConnectionEdges {
@@ -139,6 +149,7 @@ input DocumentMutation {
 input PostMutation {
   title: String
   body: JSON
+  pubDate: String
 }
 
 schema {
