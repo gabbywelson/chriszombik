@@ -79,6 +79,8 @@ export type Query = {
   workConnection: WorkConnection;
   static: Static;
   staticConnection: StaticConnection;
+  upcoming: Upcoming;
+  upcomingConnection: UpcomingConnection;
 };
 
 
@@ -147,10 +149,26 @@ export type QueryStaticConnectionArgs = {
   filter?: InputMaybe<StaticFilter>;
 };
 
+
+export type QueryUpcomingArgs = {
+  relativePath?: InputMaybe<Scalars['String']>;
+};
+
+
+export type QueryUpcomingConnectionArgs = {
+  before?: InputMaybe<Scalars['String']>;
+  after?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
+  sort?: InputMaybe<Scalars['String']>;
+  filter?: InputMaybe<UpcomingFilter>;
+};
+
 export type DocumentFilter = {
   post?: InputMaybe<PostFilter>;
   work?: InputMaybe<WorkFilter>;
   static?: InputMaybe<StaticFilter>;
+  upcoming?: InputMaybe<UpcomingFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -189,7 +207,7 @@ export type CollectionDocumentsArgs = {
   filter?: InputMaybe<DocumentFilter>;
 };
 
-export type DocumentNode = Post | Work | Static;
+export type DocumentNode = Post | Work | Static | Upcoming;
 
 export type Post = Node & Document & {
   __typename?: 'Post';
@@ -308,6 +326,35 @@ export type StaticConnection = Connection & {
   edges?: Maybe<Array<Maybe<StaticConnectionEdges>>>;
 };
 
+export type Upcoming = Node & Document & {
+  __typename?: 'Upcoming';
+  title: Scalars['String'];
+  description?: Maybe<Scalars['JSON']>;
+  status?: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON'];
+};
+
+export type UpcomingFilter = {
+  title?: InputMaybe<StringFilter>;
+  description?: InputMaybe<RichTextFilter>;
+  status?: InputMaybe<StringFilter>;
+};
+
+export type UpcomingConnectionEdges = {
+  __typename?: 'UpcomingConnectionEdges';
+  cursor: Scalars['String'];
+  node?: Maybe<Upcoming>;
+};
+
+export type UpcomingConnection = Connection & {
+  __typename?: 'UpcomingConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float'];
+  edges?: Maybe<Array<Maybe<UpcomingConnectionEdges>>>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addPendingDocument: DocumentNode;
@@ -320,6 +367,8 @@ export type Mutation = {
   createWork: Work;
   updateStatic: Static;
   createStatic: Static;
+  updateUpcoming: Upcoming;
+  createUpcoming: Upcoming;
 };
 
 
@@ -385,10 +434,23 @@ export type MutationCreateStaticArgs = {
   params: StaticMutation;
 };
 
+
+export type MutationUpdateUpcomingArgs = {
+  relativePath: Scalars['String'];
+  params: UpcomingMutation;
+};
+
+
+export type MutationCreateUpcomingArgs = {
+  relativePath: Scalars['String'];
+  params: UpcomingMutation;
+};
+
 export type DocumentUpdateMutation = {
   post?: InputMaybe<PostMutation>;
   work?: InputMaybe<WorkMutation>;
   static?: InputMaybe<StaticMutation>;
+  upcoming?: InputMaybe<UpcomingMutation>;
   relativePath?: InputMaybe<Scalars['String']>;
 };
 
@@ -396,6 +458,7 @@ export type DocumentMutation = {
   post?: InputMaybe<PostMutation>;
   work?: InputMaybe<WorkMutation>;
   static?: InputMaybe<StaticMutation>;
+  upcoming?: InputMaybe<UpcomingMutation>;
 };
 
 export type PostMutation = {
@@ -417,11 +480,19 @@ export type StaticMutation = {
   body?: InputMaybe<Scalars['JSON']>;
 };
 
+export type UpcomingMutation = {
+  title?: InputMaybe<Scalars['String']>;
+  description?: InputMaybe<Scalars['JSON']>;
+  status?: InputMaybe<Scalars['String']>;
+};
+
 export type PostPartsFragment = { __typename?: 'Post', title: string, body?: any | null, pubDate?: string | null, coverImage?: string | null, coverImageAlt?: string | null, tags?: Array<string | null> | null };
 
 export type WorkPartsFragment = { __typename?: 'Work', title: string, body?: any | null };
 
 export type StaticPartsFragment = { __typename?: 'Static', title: string, body?: any | null };
+
+export type UpcomingPartsFragment = { __typename?: 'Upcoming', title: string, description?: any | null, status?: string | null };
 
 export type PostQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -480,6 +551,25 @@ export type StaticConnectionQueryVariables = Exact<{
 
 export type StaticConnectionQuery = { __typename?: 'Query', staticConnection: { __typename?: 'StaticConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'StaticConnectionEdges', cursor: string, node?: { __typename?: 'Static', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
+export type UpcomingQueryVariables = Exact<{
+  relativePath: Scalars['String'];
+}>;
+
+
+export type UpcomingQuery = { __typename?: 'Query', upcoming: { __typename?: 'Upcoming', id: string, title: string, description?: any | null, status?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+
+export type UpcomingConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']>;
+  after?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
+  sort?: InputMaybe<Scalars['String']>;
+  filter?: InputMaybe<UpcomingFilter>;
+}>;
+
+
+export type UpcomingConnectionQuery = { __typename?: 'Query', upcomingConnection: { __typename?: 'UpcomingConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'UpcomingConnectionEdges', cursor: string, node?: { __typename?: 'Upcoming', id: string, title: string, description?: any | null, status?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+
 export const PostPartsFragmentDoc = gql`
     fragment PostParts on Post {
   title
@@ -500,6 +590,13 @@ export const StaticPartsFragmentDoc = gql`
     fragment StaticParts on Static {
   title
   body
+}
+    `;
+export const UpcomingPartsFragmentDoc = gql`
+    fragment UpcomingParts on Upcoming {
+  title
+  description
+  status
 }
     `;
 export const PostDocument = gql`
@@ -667,6 +764,61 @@ export const StaticConnectionDocument = gql`
   }
 }
     ${StaticPartsFragmentDoc}`;
+export const UpcomingDocument = gql`
+    query upcoming($relativePath: String!) {
+  upcoming(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...UpcomingParts
+  }
+}
+    ${UpcomingPartsFragmentDoc}`;
+export const UpcomingConnectionDocument = gql`
+    query upcomingConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: UpcomingFilter) {
+  upcomingConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...UpcomingParts
+      }
+    }
+  }
+}
+    ${UpcomingPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -687,6 +839,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     staticConnection(variables?: StaticConnectionQueryVariables, options?: C): Promise<{data: StaticConnectionQuery, variables: StaticConnectionQueryVariables, query: string}> {
         return requester<{data: StaticConnectionQuery, variables: StaticConnectionQueryVariables, query: string}, StaticConnectionQueryVariables>(StaticConnectionDocument, variables, options);
+      },
+    upcoming(variables: UpcomingQueryVariables, options?: C): Promise<{data: UpcomingQuery, variables: UpcomingQueryVariables, query: string}> {
+        return requester<{data: UpcomingQuery, variables: UpcomingQueryVariables, query: string}, UpcomingQueryVariables>(UpcomingDocument, variables, options);
+      },
+    upcomingConnection(variables?: UpcomingConnectionQueryVariables, options?: C): Promise<{data: UpcomingConnectionQuery, variables: UpcomingConnectionQueryVariables, query: string}> {
+        return requester<{data: UpcomingConnectionQuery, variables: UpcomingConnectionQueryVariables, query: string}, UpcomingConnectionQueryVariables>(UpcomingConnectionDocument, variables, options);
       }
     };
   }
