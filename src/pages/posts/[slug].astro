@@ -13,6 +13,11 @@ export async function getStaticPaths() {
 // 2. When it's time to render, you can get the entry directly from the prop
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const clientId = process.env.TINA_CLIENT_ID || null;
+const clientToken = process.env.TINA_CLIENT_TOKEN || null;
+console.log("clientID is:", clientId);
+console.log("clientToken is:", clientToken);
 ---
 
 <BaseLayout pageTitle={entry.data.title} customClass="justify-center">
