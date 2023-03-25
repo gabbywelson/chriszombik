@@ -1,14 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About";
-import tall_photo from "../images/tall_photo.jpeg";
-//       alt="Chris sitting in front of a background of green foliage with a low stone wall. He is wearing a white dress shirt with the sleeves rolled up, and has his chin resting on one hand"
+import wide_photo from "../images/wide_photo.jpeg";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class="pt-4 flex flex-col md:flex-row">
-    <img class="max-w-s mx-3 md:max-h-96" src={tall_photo} />
-    <p class="prose">
+  <div class="w-full flex flex-col items-center">
+    <img class="prose max-w-sm mx-3 md:max-w-xl md:max-h-96" src={wide_photo} />
+    <p class="prose max-w-s mx-3 mt-4">
       Chris is a writer and independent educational consultant. He previously
       lived and worked in Shanghai, China, where he attended the Shanghai
       Writing Workshop. He has written numerous science fiction stories,

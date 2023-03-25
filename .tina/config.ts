@@ -42,10 +42,46 @@ export default defineConfig({
           {
             type: "datetime",
             name: "pubDate",
-            label: "PubDate"
+            label: "Pub Date"
+          },
+          {
+            type: "image",
+            name: "coverImage",
+            label: "Cover Image"
+          },
+          {
+            type: "string",
+            name: "coverImageAlt",
+            label: "Cover Image Alt Text - cover images will not display without this being populated"
+          },
+          {
+            label: "Tags",
+            name: "tags",
+            type: "string",
+            list: true
           }
         ],
       },
+      {
+        name: "work",
+        label: "Works",
+        path: "src/content/works",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          }
+        ]
+      }
     ],
   },
 });

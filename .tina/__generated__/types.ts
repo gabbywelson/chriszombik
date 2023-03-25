@@ -75,6 +75,8 @@ export type Query = {
   document: DocumentNode;
   post: Post;
   postConnection: PostConnection;
+  work: Work;
+  workConnection: WorkConnection;
 };
 
 
@@ -113,8 +115,24 @@ export type QueryPostConnectionArgs = {
   filter?: InputMaybe<PostFilter>;
 };
 
+
+export type QueryWorkArgs = {
+  relativePath?: InputMaybe<Scalars['String']>;
+};
+
+
+export type QueryWorkConnectionArgs = {
+  before?: InputMaybe<Scalars['String']>;
+  after?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
+  sort?: InputMaybe<Scalars['String']>;
+  filter?: InputMaybe<WorkFilter>;
+};
+
 export type DocumentFilter = {
   post?: InputMaybe<PostFilter>;
+  work?: InputMaybe<WorkFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -153,13 +171,16 @@ export type CollectionDocumentsArgs = {
   filter?: InputMaybe<DocumentFilter>;
 };
 
-export type DocumentNode = Post;
+export type DocumentNode = Post | Work;
 
 export type Post = Node & Document & {
   __typename?: 'Post';
   title: Scalars['String'];
   body?: Maybe<Scalars['JSON']>;
   pubDate?: Maybe<Scalars['String']>;
+  coverImage?: Maybe<Scalars['String']>;
+  coverImageAlt?: Maybe<Scalars['String']>;
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>;
   id: Scalars['ID'];
   _sys: SystemInfo;
   _values: Scalars['JSON'];
@@ -186,10 +207,20 @@ export type DatetimeFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
+export type ImageFilter = {
+  startsWith?: InputMaybe<Scalars['String']>;
+  eq?: InputMaybe<Scalars['String']>;
+  exists?: InputMaybe<Scalars['Boolean']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
 export type PostFilter = {
   title?: InputMaybe<StringFilter>;
   body?: InputMaybe<RichTextFilter>;
   pubDate?: InputMaybe<DatetimeFilter>;
+  coverImage?: InputMaybe<ImageFilter>;
+  coverImageAlt?: InputMaybe<StringFilter>;
+  tags?: InputMaybe<StringFilter>;
 };
 
 export type PostConnectionEdges = {
@@ -205,6 +236,33 @@ export type PostConnection = Connection & {
   edges?: Maybe<Array<Maybe<PostConnectionEdges>>>;
 };
 
+export type Work = Node & Document & {
+  __typename?: 'Work';
+  title: Scalars['String'];
+  body?: Maybe<Scalars['JSON']>;
+  id: Scalars['ID'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON'];
+};
+
+export type WorkFilter = {
+  title?: InputMaybe<StringFilter>;
+  body?: InputMaybe<RichTextFilter>;
+};
+
+export type WorkConnectionEdges = {
+  __typename?: 'WorkConnectionEdges';
+  cursor: Scalars['String'];
+  node?: Maybe<Work>;
+};
+
+export type WorkConnection = Connection & {
+  __typename?: 'WorkConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float'];
+  edges?: Maybe<Array<Maybe<WorkConnectionEdges>>>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addPendingDocument: DocumentNode;
@@ -213,6 +271,8 @@ export type Mutation = {
   createDocument: DocumentNode;
   updatePost: Post;
   createPost: Post;
+  updateWork: Work;
+  createWork: Work;
 };
 
 
@@ -254,29 +314,53 @@ export type MutationCreatePostArgs = {
   params: PostMutation;
 };
 
+
+export type MutationUpdateWorkArgs = {
+  relativePath: Scalars['String'];
+  params: WorkMutation;
+};
+
+
+export type MutationCreateWorkArgs = {
+  relativePath: Scalars['String'];
+  params: WorkMutation;
+};
+
 export type DocumentUpdateMutation = {
   post?: InputMaybe<PostMutation>;
+  work?: InputMaybe<WorkMutation>;
   relativePath?: InputMaybe<Scalars['String']>;
 };
 
 export type DocumentMutation = {
   post?: InputMaybe<PostMutation>;
+  work?: InputMaybe<WorkMutation>;
 };
 
 export type PostMutation = {
   title?: InputMaybe<Scalars['String']>;
   body?: InputMaybe<Scalars['JSON']>;
   pubDate?: InputMaybe<Scalars['String']>;
+  coverImage?: InputMaybe<Scalars['String']>;
+  coverImageAlt?: InputMaybe<Scalars['String']>;
+  tags?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
-export type PostPartsFragment = { __typename?: 'Post', title: string, body?: any | null, pubDate?: string | null };
+export type WorkMutation = {
+  title?: InputMaybe<Scalars['String']>;
+  body?: InputMaybe<Scalars['JSON']>;
+};
+
+export type PostPartsFragment = { __typename?: 'Post', title: string, body?: any | null, pubDate?: string | null, coverImage?: string | null, coverImageAlt?: string | null, tags?: Array<string | null> | null };
+
+export type WorkPartsFragment = { __typename?: 'Work', title: string, body?: any | null };
 
 export type PostQueryVariables = Exact<{
   relativePath: Scalars['String'];
 }>;
 
 
-export type PostQuery = { __typename?: 'Query', post: { __typename?: 'Post', id: string, title: string, body?: any | null, pubDate?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type PostQuery = { __typename?: 'Query', post: { __typename?: 'Post', id: string, title: string, body?: any | null, pubDate?: string | null, coverImage?: string | null, coverImageAlt?: string | null, tags?: Array<string | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type PostConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']>;
@@ -288,13 +372,41 @@ export type PostConnectionQueryVariables = Exact<{
 }>;
 
 
-export type PostConnectionQuery = { __typename?: 'Query', postConnection: { __typename?: 'PostConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PostConnectionEdges', cursor: string, node?: { __typename?: 'Post', id: string, title: string, body?: any | null, pubDate?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type PostConnectionQuery = { __typename?: 'Query', postConnection: { __typename?: 'PostConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PostConnectionEdges', cursor: string, node?: { __typename?: 'Post', id: string, title: string, body?: any | null, pubDate?: string | null, coverImage?: string | null, coverImageAlt?: string | null, tags?: Array<string | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+
+export type WorkQueryVariables = Exact<{
+  relativePath: Scalars['String'];
+}>;
+
+
+export type WorkQuery = { __typename?: 'Query', work: { __typename?: 'Work', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+
+export type WorkConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']>;
+  after?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
+  sort?: InputMaybe<Scalars['String']>;
+  filter?: InputMaybe<WorkFilter>;
+}>;
+
+
+export type WorkConnectionQuery = { __typename?: 'Query', workConnection: { __typename?: 'WorkConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'WorkConnectionEdges', cursor: string, node?: { __typename?: 'Work', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export const PostPartsFragmentDoc = gql`
     fragment PostParts on Post {
   title
   body
   pubDate
+  coverImage
+  coverImageAlt
+  tags
+}
+    `;
+export const WorkPartsFragmentDoc = gql`
+    fragment WorkParts on Work {
+  title
+  body
 }
     `;
 export const PostDocument = gql`
@@ -352,6 +464,61 @@ export const PostConnectionDocument = gql`
   }
 }
     ${PostPartsFragmentDoc}`;
+export const WorkDocument = gql`
+    query work($relativePath: String!) {
+  work(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...WorkParts
+  }
+}
+    ${WorkPartsFragmentDoc}`;
+export const WorkConnectionDocument = gql`
+    query workConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: WorkFilter) {
+  workConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...WorkParts
+      }
+    }
+  }
+}
+    ${WorkPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -360,6 +527,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     postConnection(variables?: PostConnectionQueryVariables, options?: C): Promise<{data: PostConnectionQuery, variables: PostConnectionQueryVariables, query: string}> {
         return requester<{data: PostConnectionQuery, variables: PostConnectionQueryVariables, query: string}, PostConnectionQueryVariables>(PostConnectionDocument, variables, options);
+      },
+    work(variables: WorkQueryVariables, options?: C): Promise<{data: WorkQuery, variables: WorkQueryVariables, query: string}> {
+        return requester<{data: WorkQuery, variables: WorkQueryVariables, query: string}, WorkQueryVariables>(WorkDocument, variables, options);
+      },
+    workConnection(variables?: WorkConnectionQueryVariables, options?: C): Promise<{data: WorkConnectionQuery, variables: WorkConnectionQueryVariables, query: string}> {
+        return requester<{data: WorkConnectionQuery, variables: WorkConnectionQueryVariables, query: string}, WorkConnectionQueryVariables>(WorkConnectionDocument, variables, options);
       }
     };
   }
@@ -391,7 +564,7 @@ const generateRequester = (client: TinaClient) => {
  **/
 export const ExperimentalGetTinaClient = () =>
   getSdk(
-    generateRequester(createClient({ url: "https://content.tinajs.io/1.4/content/f9808892-bc50-4d65-bd5d-b4fd9b69031d/github/main", queries }))
+    generateRequester(createClient({ url: "http://localhost:4001/graphql", queries }))
   );
 
 export const queries = (client: TinaClient) => {
