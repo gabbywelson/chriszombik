@@ -7,9 +7,9 @@ Gucci lit swag
 
 ![](https://assets.tina.io/f9808892-bc50-4d65-bd5d-b4fd9b69031d/b60-thumbshotv2.png "")
 
-Such formatting
+**Such formatting**
 
-Much italics
+*Much italics*
 
 ```javascript
 const swag = 'lit'
