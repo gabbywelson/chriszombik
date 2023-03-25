@@ -42,7 +42,17 @@ export default defineConfig({
           {
             type: "datetime",
             name: "pubDate",
-            label: "PubDate"
+            label: "Pub Date"
+          },
+          {
+            type: "image",
+            name: "coverImage",
+            label: "Cover Image"
+          },
+          {
+            type: "string",
+            name: "coverImageAlt",
+            label: "Cover Image Alt Text"
           }
         ],
       },

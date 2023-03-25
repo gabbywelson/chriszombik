@@ -2,4 +2,6 @@ fragment PostParts on Post {
   title
   body
   pubDate
+  coverImage
+  coverImageAlt
 }

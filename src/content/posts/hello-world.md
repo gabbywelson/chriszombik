@@ -1,6 +1,8 @@
 ---
 title: 'Hello, World!'
 pubDate: '2023-02-15T00:00:00.000Z'
+coverImage: /b60-thumbshotv2.png
+coverImageAlt: Image of the Boskone 60 conference poster
 ---
 
 ## Hello World!

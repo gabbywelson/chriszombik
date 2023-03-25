@@ -85,6 +85,8 @@ type Post implements Node & Document {
   title: String!
   body: JSON
   pubDate: String
+  coverImage: String
+  coverImageAlt: String
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -111,10 +113,19 @@ input DatetimeFilter {
   in: [String]
 }
 
+input ImageFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
 input PostFilter {
   title: StringFilter
   body: RichTextFilter
   pubDate: DatetimeFilter
+  coverImage: ImageFilter
+  coverImageAlt: StringFilter
 }
 
 type PostConnectionEdges {
@@ -150,6 +161,8 @@ input PostMutation {
   title: String
   body: JSON
   pubDate: String
+  coverImage: String
+  coverImageAlt: String
 }
 
 schema {
