@@ -4,7 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("blog");
+  const blogEntries = await getCollection("posts");
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -17,14 +17,17 @@ const { Content } = await entry.render();
 
 <BaseLayout pageTitle={entry.data.title} customClass="justify-center">
   <article class="prose">
-    <aside>
-      <h1 class="mb-2 font-bold text-2xl">{entry.data.title}</h1>
-      <div class="italic">
-        <span>Posted:</span>
-        <time>{entry.data.pubDate}</time>
-      </div>
-    </aside>
+    <h1 class="mb-2 font-bold text-2xl">{entry.data.title}</h1>
     <Content />
+    <aside
+      class="border-2 border-slate-400 bg-slate-200 p-3 rounded-lg text-sm flex flex-col my-8"
+    >
+      <span class="p-1">
+        <strong>Posted on:</strong>
+        <time datetime={entry.data.pubDate}>
+          {entry.data.pubDate}
+        </time>
+      </span>
+    </aside>
   </article>
 </BaseLayout>
- 
