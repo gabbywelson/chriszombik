@@ -24,8 +24,8 @@ const { Content } = await entry.render();
     >
       <span class="p-1">
         <strong>Posted on:</strong>
-        <time datetime={entry.data.pubDate.toISOString()}>
-          {entry.data.pubDate.toDateString()}
+        <time datetime={entry.data.pubDate}>
+          {entry.data.pubDate}
         </time>
       </span>
     </aside>
