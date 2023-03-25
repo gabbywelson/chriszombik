@@ -1,11 +1,11 @@
 ---
 title: 'Boskone 60'
-pubDate: '2023-02-15'
-author: 'Chris Zombik'
-image:
-    url: '/blog/boskone.png'
-    alt: 'Marketing banner for the Boskone 60 conference'
-tags: ['Boston', 'Conference', 'Reflection']
+pubDate: '2023-02-15T00:00:00.000Z'
+coverImage: /b60-thumbshotv2.png
+coverImageAlt: Image of the Boskone 60 conference poster
+tags:
+  - Conference
+  - Boston
 ---
 
 Like a lot of young people in the COVID-cautious states, my social life came to a near standstill. I had been living in Shanghai for almost five years before this point, and through an accident of timing found myself back together with two parents, an adult sister, two dogs, and a cat, in my parents' downsized empty-nester home in Western Massachusetts. We spent a year and a half this way. I passed the time by writing a fantasy novel.

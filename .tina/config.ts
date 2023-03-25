@@ -52,7 +52,7 @@ export default defineConfig({
           {
             type: "string",
             name: "coverImageAlt",
-            label: "Cover Image Alt Text"
+            label: "Cover Image Alt Text - cover images will not display without this being populated"
           },
           {
             label: "Tags",
@@ -62,6 +62,26 @@ export default defineConfig({
           }
         ],
       },
+      {
+        name: "work",
+        label: "Works",
+        path: "src/content/works",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          }
+        ]
+      }
     ],
   },
 });

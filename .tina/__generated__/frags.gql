@@ -6,3 +6,8 @@ fragment PostParts on Post {
   coverImageAlt
   tags
 }
+
+fragment WorkParts on Work {
+  title
+  body
+}

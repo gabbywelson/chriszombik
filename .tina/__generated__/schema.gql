@@ -50,10 +50,13 @@ type Query {
   document(collection: String, relativePath: String): DocumentNode!
   post(relativePath: String): Post!
   postConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PostFilter): PostConnection!
+  work(relativePath: String): Work!
+  workConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: WorkFilter): WorkConnection!
 }
 
 input DocumentFilter {
   post: PostFilter
+  work: WorkFilter
 }
 
 type DocumentConnectionEdges {
@@ -79,7 +82,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter): DocumentConnection!
 }
 
-union DocumentNode = Post
+union DocumentNode = Post | Work
 
 type Post implements Node & Document {
   title: String!
@@ -141,6 +144,30 @@ type PostConnection implements Connection {
   edges: [PostConnectionEdges]
 }
 
+type Work implements Node & Document {
+  title: String!
+  body: JSON
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input WorkFilter {
+  title: StringFilter
+  body: RichTextFilter
+}
+
+type WorkConnectionEdges {
+  cursor: String!
+  node: Work
+}
+
+type WorkConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [WorkConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -148,15 +175,19 @@ type Mutation {
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   updatePost(relativePath: String!, params: PostMutation!): Post!
   createPost(relativePath: String!, params: PostMutation!): Post!
+  updateWork(relativePath: String!, params: WorkMutation!): Work!
+  createWork(relativePath: String!, params: WorkMutation!): Work!
 }
 
 input DocumentUpdateMutation {
   post: PostMutation
+  work: WorkMutation
   relativePath: String
 }
 
 input DocumentMutation {
   post: PostMutation
+  work: WorkMutation
 }
 
 input PostMutation {
@@ -166,6 +197,11 @@ input PostMutation {
   coverImage: String
   coverImageAlt: String
   tags: [String]
+}
+
+input WorkMutation {
+  title: String
+  body: JSON
 }
 
 schema {

@@ -1,7 +1,5 @@
 ---
 title: 'Anti-Claus'
-pubDate: 'December 20, 2020'
-author: 'Chris Zombik'
 ---
 It was North Pole Industries’ annual pre-Christmas team meeting, and Head Elf Bernard had taken the floor with unaccustomed gravity. 
 
