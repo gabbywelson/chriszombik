@@ -13,6 +13,8 @@ export async function getStaticPaths() {
 // 2. When it's time to render, you can get the entry directly from the prop
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const postDate = new Date(entry.data.pubDate).toLocaleString();
 ---
 
 <BaseLayout pageTitle={entry.data.title} customClass="justify-center">
@@ -21,7 +23,7 @@ const { Content } = await entry.render();
       <h1 class="mb-2 font-bold text-2xl">{entry.data.title}</h1>
       <div class="italic">
         <span>Posted:</span>
-        <time>{entry.data.pubDate}</time>
+        <time>{postDate}</time>
       </div>
     </aside>
     <Content />

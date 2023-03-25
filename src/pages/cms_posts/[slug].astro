@@ -13,21 +13,18 @@ export async function getStaticPaths() {
 // 2. When it's time to render, you can get the entry directly from the prop
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const postDate = new Date(entry.data.pubDate).toLocaleString();
 ---
 
 <BaseLayout pageTitle={entry.data.title} customClass="justify-center">
   <article class="prose">
-    <h1 class="mb-2 font-bold text-2xl">{entry.data.title}</h1>
-    <Content />
-    <aside
-      class="border-2 border-slate-400 bg-slate-200 p-3 rounded-lg text-sm flex flex-col my-8"
-    >
-      <span class="p-1">
-        <strong>Posted on:</strong>
-        <time datetime={entry.data.pubDate}>
-          {entry.data.pubDate}
-        </time>
-      </span>
+    <aside>
+      <h1 class="mb-2 font-bold text-2xl">{entry.data.title}</h1>
+      <div class="italic">
+        <span>Posted:</span>
+        <time>{postDate}</time>
+      </div>
     </aside>
+    <Content />
   </article>
 </BaseLayout>
