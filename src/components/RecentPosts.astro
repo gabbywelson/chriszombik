@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 const blogEntries = await getCollection("blog");
+import formatDate from "../../utils/formatDate";
 ---
 
 <section class="p1">
@@ -22,7 +23,7 @@ const blogEntries = await getCollection("blog");
             </a>
             <span> ~ </span>
             <time datetime={blogPostEntry.data.pubDate.toISOString()}>
-              {blogPostEntry.data.pubDate.toDateString()}
+              {formatDate(blogPostEntry.data.pubDate)}
             </time>
           </li>
         ))

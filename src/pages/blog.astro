@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Blog";
 import { getCollection } from "astro:content";
 const blogEntries = await getCollection("blog");
+import formatDate from "../../utils/formatDate";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -19,7 +20,7 @@ const blogEntries = await getCollection("blog");
               <span>
                 (Posted
                 <time datetime={blogPostEntry.data.pubDate.toISOString()}>
-                  {blogPostEntry.data.pubDate.toDateString()}
+                  {formatDate(blogPostEntry.data.pubDate)}
                 </time>
                 )
               </span>
