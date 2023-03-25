@@ -77,6 +77,8 @@ export type Query = {
   postConnection: PostConnection;
   work: Work;
   workConnection: WorkConnection;
+  static: Static;
+  staticConnection: StaticConnection;
 };
 
 
@@ -130,9 +132,25 @@ export type QueryWorkConnectionArgs = {
   filter?: InputMaybe<WorkFilter>;
 };
 
+
+export type QueryStaticArgs = {
+  relativePath?: InputMaybe<Scalars['String']>;
+};
+
+
+export type QueryStaticConnectionArgs = {
+  before?: InputMaybe<Scalars['String']>;
+  after?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
+  sort?: InputMaybe<Scalars['String']>;
+  filter?: InputMaybe<StaticFilter>;
+};
+
 export type DocumentFilter = {
   post?: InputMaybe<PostFilter>;
   work?: InputMaybe<WorkFilter>;
+  static?: InputMaybe<StaticFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -171,7 +189,7 @@ export type CollectionDocumentsArgs = {
   filter?: InputMaybe<DocumentFilter>;
 };
 
-export type DocumentNode = Post | Work;
+export type DocumentNode = Post | Work | Static;
 
 export type Post = Node & Document & {
   __typename?: 'Post';
@@ -263,6 +281,33 @@ export type WorkConnection = Connection & {
   edges?: Maybe<Array<Maybe<WorkConnectionEdges>>>;
 };
 
+export type Static = Node & Document & {
+  __typename?: 'Static';
+  title: Scalars['String'];
+  body?: Maybe<Scalars['JSON']>;
+  id: Scalars['ID'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON'];
+};
+
+export type StaticFilter = {
+  title?: InputMaybe<StringFilter>;
+  body?: InputMaybe<RichTextFilter>;
+};
+
+export type StaticConnectionEdges = {
+  __typename?: 'StaticConnectionEdges';
+  cursor: Scalars['String'];
+  node?: Maybe<Static>;
+};
+
+export type StaticConnection = Connection & {
+  __typename?: 'StaticConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float'];
+  edges?: Maybe<Array<Maybe<StaticConnectionEdges>>>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addPendingDocument: DocumentNode;
@@ -273,6 +318,8 @@ export type Mutation = {
   createPost: Post;
   updateWork: Work;
   createWork: Work;
+  updateStatic: Static;
+  createStatic: Static;
 };
 
 
@@ -326,15 +373,29 @@ export type MutationCreateWorkArgs = {
   params: WorkMutation;
 };
 
+
+export type MutationUpdateStaticArgs = {
+  relativePath: Scalars['String'];
+  params: StaticMutation;
+};
+
+
+export type MutationCreateStaticArgs = {
+  relativePath: Scalars['String'];
+  params: StaticMutation;
+};
+
 export type DocumentUpdateMutation = {
   post?: InputMaybe<PostMutation>;
   work?: InputMaybe<WorkMutation>;
+  static?: InputMaybe<StaticMutation>;
   relativePath?: InputMaybe<Scalars['String']>;
 };
 
 export type DocumentMutation = {
   post?: InputMaybe<PostMutation>;
   work?: InputMaybe<WorkMutation>;
+  static?: InputMaybe<StaticMutation>;
 };
 
 export type PostMutation = {
@@ -351,9 +412,16 @@ export type WorkMutation = {
   body?: InputMaybe<Scalars['JSON']>;
 };
 
+export type StaticMutation = {
+  title?: InputMaybe<Scalars['String']>;
+  body?: InputMaybe<Scalars['JSON']>;
+};
+
 export type PostPartsFragment = { __typename?: 'Post', title: string, body?: any | null, pubDate?: string | null, coverImage?: string | null, coverImageAlt?: string | null, tags?: Array<string | null> | null };
 
 export type WorkPartsFragment = { __typename?: 'Work', title: string, body?: any | null };
+
+export type StaticPartsFragment = { __typename?: 'Static', title: string, body?: any | null };
 
 export type PostQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -393,6 +461,25 @@ export type WorkConnectionQueryVariables = Exact<{
 
 export type WorkConnectionQuery = { __typename?: 'Query', workConnection: { __typename?: 'WorkConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'WorkConnectionEdges', cursor: string, node?: { __typename?: 'Work', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
+export type StaticQueryVariables = Exact<{
+  relativePath: Scalars['String'];
+}>;
+
+
+export type StaticQuery = { __typename?: 'Query', static: { __typename?: 'Static', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+
+export type StaticConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']>;
+  after?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
+  sort?: InputMaybe<Scalars['String']>;
+  filter?: InputMaybe<StaticFilter>;
+}>;
+
+
+export type StaticConnectionQuery = { __typename?: 'Query', staticConnection: { __typename?: 'StaticConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'StaticConnectionEdges', cursor: string, node?: { __typename?: 'Static', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+
 export const PostPartsFragmentDoc = gql`
     fragment PostParts on Post {
   title
@@ -405,6 +492,12 @@ export const PostPartsFragmentDoc = gql`
     `;
 export const WorkPartsFragmentDoc = gql`
     fragment WorkParts on Work {
+  title
+  body
+}
+    `;
+export const StaticPartsFragmentDoc = gql`
+    fragment StaticParts on Static {
   title
   body
 }
@@ -519,6 +612,61 @@ export const WorkConnectionDocument = gql`
   }
 }
     ${WorkPartsFragmentDoc}`;
+export const StaticDocument = gql`
+    query static($relativePath: String!) {
+  static(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...StaticParts
+  }
+}
+    ${StaticPartsFragmentDoc}`;
+export const StaticConnectionDocument = gql`
+    query staticConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: StaticFilter) {
+  staticConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...StaticParts
+      }
+    }
+  }
+}
+    ${StaticPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -533,6 +681,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     workConnection(variables?: WorkConnectionQueryVariables, options?: C): Promise<{data: WorkConnectionQuery, variables: WorkConnectionQueryVariables, query: string}> {
         return requester<{data: WorkConnectionQuery, variables: WorkConnectionQueryVariables, query: string}, WorkConnectionQueryVariables>(WorkConnectionDocument, variables, options);
+      },
+    static(variables: StaticQueryVariables, options?: C): Promise<{data: StaticQuery, variables: StaticQueryVariables, query: string}> {
+        return requester<{data: StaticQuery, variables: StaticQueryVariables, query: string}, StaticQueryVariables>(StaticDocument, variables, options);
+      },
+    staticConnection(variables?: StaticConnectionQueryVariables, options?: C): Promise<{data: StaticConnectionQuery, variables: StaticConnectionQueryVariables, query: string}> {
+        return requester<{data: StaticConnectionQuery, variables: StaticConnectionQueryVariables, query: string}, StaticConnectionQueryVariables>(StaticConnectionDocument, variables, options);
       }
     };
   }

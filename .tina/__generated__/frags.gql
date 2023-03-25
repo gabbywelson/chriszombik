@@ -11,3 +11,8 @@ fragment WorkParts on Work {
   title
   body
 }
+
+fragment StaticParts on Static {
+  title
+  body
+}

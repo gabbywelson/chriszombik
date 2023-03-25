@@ -52,11 +52,14 @@ type Query {
   postConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PostFilter): PostConnection!
   work(relativePath: String): Work!
   workConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: WorkFilter): WorkConnection!
+  static(relativePath: String): Static!
+  staticConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: StaticFilter): StaticConnection!
 }
 
 input DocumentFilter {
   post: PostFilter
   work: WorkFilter
+  static: StaticFilter
 }
 
 type DocumentConnectionEdges {
@@ -82,7 +85,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter): DocumentConnection!
 }
 
-union DocumentNode = Post | Work
+union DocumentNode = Post | Work | Static
 
 type Post implements Node & Document {
   title: String!
@@ -168,6 +171,30 @@ type WorkConnection implements Connection {
   edges: [WorkConnectionEdges]
 }
 
+type Static implements Node & Document {
+  title: String!
+  body: JSON
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input StaticFilter {
+  title: StringFilter
+  body: RichTextFilter
+}
+
+type StaticConnectionEdges {
+  cursor: String!
+  node: Static
+}
+
+type StaticConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [StaticConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -177,17 +204,21 @@ type Mutation {
   createPost(relativePath: String!, params: PostMutation!): Post!
   updateWork(relativePath: String!, params: WorkMutation!): Work!
   createWork(relativePath: String!, params: WorkMutation!): Work!
+  updateStatic(relativePath: String!, params: StaticMutation!): Static!
+  createStatic(relativePath: String!, params: StaticMutation!): Static!
 }
 
 input DocumentUpdateMutation {
   post: PostMutation
   work: WorkMutation
+  static: StaticMutation
   relativePath: String
 }
 
 input DocumentMutation {
   post: PostMutation
   work: WorkMutation
+  static: StaticMutation
 }
 
 input PostMutation {
@@ -200,6 +231,11 @@ input PostMutation {
 }
 
 input WorkMutation {
+  title: String
+  body: JSON
+}
+
+input StaticMutation {
   title: String
   body: JSON
 }

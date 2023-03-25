@@ -1,21 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "About";
+import { getEntryBySlug } from "astro:content";
 import wide_photo from "../images/wide_photo.jpeg";
+const pageTitle = "About";
+
+const bio = await getEntryBySlug("static", "long-bio");
+const { Content } = await bio.render();
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="w-full flex flex-col items-center">
     <img class="prose max-w-sm mx-3 md:max-w-xl md:max-h-96" src={wide_photo} />
-    <p class="prose max-w-s mx-3 mt-4">
-      Chris is a writer and independent educational consultant. He previously
-      lived and worked in Shanghai, China, where he attended the Shanghai
-      Writing Workshop. He has written numerous science fiction stories,
-      including two novellas for the International 3-Day Novel Contest.
-      Currently, he is editing his first novel, a work of epic fantasy, as well
-      as co-authoring the memoir of a business associate from China. In his free
-      time, Chris runs a homebrew D&D campaign, practices yoga, and watches a
-      little too much YouTube. He lives in Somerville, Massachusetts.
-    </p>
+    <div class="prose max-w-s mx-3 mt-4">
+      <Content />
+    </div>
   </div>
 </BaseLayout>
