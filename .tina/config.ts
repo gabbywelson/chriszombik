@@ -81,7 +81,52 @@ export default defineConfig({
             isBody: true,
           }
         ]
-      }
+      },
+      {
+        name: "static",
+        label: "Static Site Content",
+        path: "src/content/static",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          }
+        ]
+      },
+      {
+        name: "upcoming",
+        label: "Upcoming Projects",
+        path: "src/content/upcoming",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "description",
+            label: "Descripton",
+            isBody: true,
+          },
+          {
+            type: "string",
+            name: "status",
+            label: "Status",
+          }
+        ]
+      },
     ],
   },
 });

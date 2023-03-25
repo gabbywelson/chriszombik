@@ -52,11 +52,17 @@ type Query {
   postConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PostFilter): PostConnection!
   work(relativePath: String): Work!
   workConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: WorkFilter): WorkConnection!
+  static(relativePath: String): Static!
+  staticConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: StaticFilter): StaticConnection!
+  upcoming(relativePath: String): Upcoming!
+  upcomingConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: UpcomingFilter): UpcomingConnection!
 }
 
 input DocumentFilter {
   post: PostFilter
   work: WorkFilter
+  static: StaticFilter
+  upcoming: UpcomingFilter
 }
 
 type DocumentConnectionEdges {
@@ -82,7 +88,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter): DocumentConnection!
 }
 
-union DocumentNode = Post | Work
+union DocumentNode = Post | Work | Static | Upcoming
 
 type Post implements Node & Document {
   title: String!
@@ -168,6 +174,56 @@ type WorkConnection implements Connection {
   edges: [WorkConnectionEdges]
 }
 
+type Static implements Node & Document {
+  title: String!
+  body: JSON
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input StaticFilter {
+  title: StringFilter
+  body: RichTextFilter
+}
+
+type StaticConnectionEdges {
+  cursor: String!
+  node: Static
+}
+
+type StaticConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [StaticConnectionEdges]
+}
+
+type Upcoming implements Node & Document {
+  title: String!
+  description: JSON
+  status: String
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input UpcomingFilter {
+  title: StringFilter
+  description: RichTextFilter
+  status: StringFilter
+}
+
+type UpcomingConnectionEdges {
+  cursor: String!
+  node: Upcoming
+}
+
+type UpcomingConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [UpcomingConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -177,17 +233,25 @@ type Mutation {
   createPost(relativePath: String!, params: PostMutation!): Post!
   updateWork(relativePath: String!, params: WorkMutation!): Work!
   createWork(relativePath: String!, params: WorkMutation!): Work!
+  updateStatic(relativePath: String!, params: StaticMutation!): Static!
+  createStatic(relativePath: String!, params: StaticMutation!): Static!
+  updateUpcoming(relativePath: String!, params: UpcomingMutation!): Upcoming!
+  createUpcoming(relativePath: String!, params: UpcomingMutation!): Upcoming!
 }
 
 input DocumentUpdateMutation {
   post: PostMutation
   work: WorkMutation
+  static: StaticMutation
+  upcoming: UpcomingMutation
   relativePath: String
 }
 
 input DocumentMutation {
   post: PostMutation
   work: WorkMutation
+  static: StaticMutation
+  upcoming: UpcomingMutation
 }
 
 input PostMutation {
@@ -202,6 +266,17 @@ input PostMutation {
 input WorkMutation {
   title: String
   body: JSON
+}
+
+input StaticMutation {
+  title: String
+  body: JSON
+}
+
+input UpcomingMutation {
+  title: String
+  description: JSON
+  status: String
 }
 
 schema {

@@ -1,4 +1,7 @@
 ---
+import { getEntryBySlug } from "astro:content";
+const bio = await getEntryBySlug("static", "short-bio");
+const { Content } = await bio.render();
 ---
 
 <section class="p-1">
@@ -6,11 +9,6 @@
     Meet Chris
   </h3>
   <div class="py-3">
-    Chris Zombik is an author and independent educational consultant. You can
-    read his <a class="underline font-bold" href="/blog">blog posts</a>, some of
-    his <a class="underline font-bold" href="/works">short fiction</a>, or a <a
-      class="underline font-bold"
-      href="/about">more in depth biography</a
-    >. Thanks for stopping by!
+    <Content />
   </div>
 </section>
