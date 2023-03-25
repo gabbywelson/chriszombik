@@ -53,6 +53,12 @@ export default defineConfig({
             type: "string",
             name: "coverImageAlt",
             label: "Cover Image Alt Text"
+          },
+          {
+            label: "Tags",
+            name: "tags",
+            type: "string",
+            list: true
           }
         ],
       },
