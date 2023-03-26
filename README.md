@@ -31,8 +31,6 @@ The site's styling is done using [Tailwind.css](https://tailwindcss.com), which 
 
 This is handled by a free + open source tool called [Tina CMS](https://tina.io) , which is partially local and partially cloud-based. The **"database"** for Tina is just Git/GitHub (this very repo!). The stuff in `/src/content/` is what Tina is aware of, and it will see files there and files created through Tina's UI will live there. 
 
-> **Tina is accessible at [chriszombik.com/admin](chriszombik.com/admin) and this is where you will do most/all site editing**
-
 
 ## Source Control
 
