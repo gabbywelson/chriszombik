@@ -19,6 +19,10 @@ export default defineConfig({
       publicFolder: "public",
     },
   },
+  cmsCallback: (cms) => {
+    cms.flags.set('branch-switcher', true)
+    return cms
+  },
   schema: {
     collections: [
       {
