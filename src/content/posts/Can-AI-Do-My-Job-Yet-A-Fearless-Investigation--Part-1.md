@@ -1,5 +1,5 @@
 ---
-title: '"Can AI Do My Job Yet"? A Fearless Investigation – Part 1'
+title: Can AI Do My Job Yet? A Fearless Investigation – Part 1
 pubDate: '2023-03-31T04:00:00.000Z'
 ---
 
