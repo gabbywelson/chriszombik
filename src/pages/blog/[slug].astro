@@ -21,17 +21,28 @@ const tagList = tags?.join(", ");
 <BaseLayout pageTitle={entry.data.title} customClass="justify-center">
   <article class="prose">
     <aside class="mb-8">
-      <h1 class="mb-2 font-bold text-4xl">{entry.data.title}</h1>
       {
         draft && (
           <div class="w-full border-2 p-2 my-2 border-yellow-500 bg-yellow-100">
-            <p>
+            <h3>
               🚨<span class="font-bold text-yellow-900">FYI: </span>This is an
               unpublished draft ⚠️
+            </h3>
+            <p>
+              It won't show up on the{" "}
+              <a href="/blog" class="font-bold underline">
+                blog page
+              </a>{" "}
+              or in lists of recent posts but it will show up at this direct
+              link or at{" "}
+              <a href="/blog/drafts" class="font-bold underline">
+                the dedicated drafts directory
+              </a>
             </p>
           </div>
         )
       }
+      <h1 class="mb-2 font-bold text-4xl">{entry.data.title}</h1>
       {
         pubDate && (
           <div class="italic">
