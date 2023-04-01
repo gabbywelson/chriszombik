@@ -97,6 +97,7 @@ type Post implements Node & Document {
   coverImage: String
   coverImageAlt: String
   tags: [String]
+  draft: Boolean
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -130,6 +131,11 @@ input ImageFilter {
   in: [String]
 }
 
+input BooleanFilter {
+  eq: Boolean
+  exists: Boolean
+}
+
 input PostFilter {
   title: StringFilter
   body: RichTextFilter
@@ -137,6 +143,7 @@ input PostFilter {
   coverImage: ImageFilter
   coverImageAlt: StringFilter
   tags: StringFilter
+  draft: BooleanFilter
 }
 
 type PostConnectionEdges {
@@ -261,6 +268,7 @@ input PostMutation {
   coverImage: String
   coverImageAlt: String
   tags: [String]
+  draft: Boolean
 }
 
 input WorkMutation {

@@ -63,7 +63,12 @@ export default defineConfig({
             name: "tags",
             type: "string",
             list: true
-          }
+          },
+          {
+            label: "Is this a draft?",
+            name: "draft",
+            type: "boolean"
+          },
         ],
       },
       {
