@@ -5,6 +5,7 @@ fragment PostParts on Post {
   coverImage
   coverImageAlt
   tags
+  draft
 }
 
 fragment WorkParts on Work {

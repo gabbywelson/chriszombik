@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const pageTitle = "Blog";
+import { getCollection } from "astro:content";
+const blogEntries = await getCollection("posts");
+const entriesToRender = blogEntries
+  .filter((post) => !post.data.draft)
+  .reverse()
+  .slice(0, 3);
+import formatDate from "../../../utils/formatDate";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <div class="w-full h-full">
+    <h2 class="font-bold pb-0.5 mb-1 border-b-2 border-b-slate-200">
+      All Posts
+    </h2>
+    <ul role="list" class="list-disc list-inside">
+      {
+        entriesToRender.map((blogPostEntry) => (
+          <li class="underline">
+            <a href={`/blog/${blogPostEntry.slug}`}>
+              <span class="font-bold">{blogPostEntry.data.title.trim()}</span>
+              <span>
+                (Posted
+                <time datetime={blogPostEntry.data.pubDate}>
+                  {formatDate(blogPostEntry.data.pubDate)}
+                </time>
+                )
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>

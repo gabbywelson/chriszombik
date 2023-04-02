@@ -1,6 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 const blogEntries = await getCollection("posts");
+const entriesToRender = blogEntries
+  .filter((post) => !post.data.draft)
+  .reverse()
+  .slice(0, 3);
 import formatDate from "../../utils/formatDate";
 ---
 
@@ -10,23 +14,17 @@ import formatDate from "../../utils/formatDate";
   </h3>
   <ul class="my1 ml-0.5" role="list">
     {
-      blogEntries
-        .reverse()
-        .slice(0, 3)
-        .map((blogPostEntry) => (
-          <li class="list-disc list-inside">
-            <a
-              class="font-bold underline"
-              href={`/posts/${blogPostEntry.slug}`}
-            >
-              {blogPostEntry.data.title}
-            </a>
-            <span> ~ </span>
-            <time datetime={blogPostEntry.data.pubDate}>
-              {formatDate(blogPostEntry.data.pubDate)}
-            </time>
-          </li>
-        ))
+      entriesToRender.map((blogPostEntry) => (
+        <li class="list-disc list-inside">
+          <a class="font-bold underline" href={`/blog/${blogPostEntry.slug}`}>
+            {blogPostEntry.data.title}
+          </a>
+          <span> ~ </span>
+          <time datetime={blogPostEntry.data.pubDate}>
+            {formatDate(blogPostEntry.data.pubDate)}
+          </time>
+        </li>
+      ))
     }
   </ul>
 </section>

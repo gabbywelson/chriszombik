@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import formatDate from "../../../../utils/formatDate";
+import { getCollection } from "astro:content";
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("posts");
+  const uniqueTags = [
+    ...new Set(blogEntries.map((post) => post.data.tags).flat()),
+  ];
+  const filteredTags = uniqueTags.filter((tag) => !!tag);
+  return filteredTags.map((tag) => {
+    const filteredPosts = blogEntries.filter(
+      (post) => post.data.tags?.includes(tag) && !post.data.draft
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts, tag },
+    };
+  });
+}
+
+const { tag, posts } = Astro.props;
+const pageTitle = `Posts tagged '${tag}'`;
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <div class="w-full h-full">
+    <h2 class="font-bold pb-0.5 mb-1 border-b-2 border-b-slate-200">
+      {pageTitle}
+    </h2>
+    <ul role="list" class="list-disc list-inside">
+      {
+        posts.map((blogPostEntry) => (
+          <li class="underline">
+            <a href={`/blog/${blogPostEntry.slug}`}>
+              <span class="font-bold">{blogPostEntry.data.title.trim()}</span>
+              <span>
+                (Posted
+                <time datetime={blogPostEntry.data.pubDate}>
+                  {formatDate(blogPostEntry.data.pubDate)}
+                </time>
+                )
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>
