@@ -133,6 +133,11 @@ export default defineConfig({
             type: "string",
             name: "status",
             label: "Status",
+          },
+          {
+            type: "boolean",
+            name: "pinned",
+            label: "Should Pin To Top?"
           }
         ]
       },

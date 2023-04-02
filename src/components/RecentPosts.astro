@@ -3,7 +3,6 @@ import { getCollection } from "astro:content";
 const blogEntries = await getCollection("posts");
 const entriesToRender = blogEntries
   .filter((post) => !post.data.draft)
-  .reverse()
   .slice(0, 3);
 import formatDate from "../../utils/formatDate";
 ---

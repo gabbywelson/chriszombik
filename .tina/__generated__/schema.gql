@@ -209,6 +209,7 @@ type Upcoming implements Node & Document {
   title: String!
   description: JSON
   status: String
+  pinned: Boolean
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -218,6 +219,7 @@ input UpcomingFilter {
   title: StringFilter
   description: RichTextFilter
   status: StringFilter
+  pinned: BooleanFilter
 }
 
 type UpcomingConnectionEdges {
@@ -285,6 +287,7 @@ input UpcomingMutation {
   title: String
   description: JSON
   status: String
+  pinned: Boolean
 }
 
 schema {
