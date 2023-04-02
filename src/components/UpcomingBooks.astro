@@ -1,6 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 const upcomingWorks = await getCollection("upcoming");
+const works = [
+  ...upcomingWorks.filter((work) => work.data.pinned),
+  ...upcomingWorks.filter((work) => !work.data.pinned),
+];
 ---
 
 <section class="p-1">
@@ -8,7 +12,7 @@ const upcomingWorks = await getCollection("upcoming");
     What I'm Working On
   </h3>
   {
-    upcomingWorks.map((work) => (
+    works.map((work) => (
       <div class="py-3">
         <strong class="font-bold">{work.data.title}</strong> - {work.body}
         <p class="mt-2">

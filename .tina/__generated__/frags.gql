@@ -22,4 +22,5 @@ fragment UpcomingParts on Upcoming {
   title
   description
   status
+  pinned
 }

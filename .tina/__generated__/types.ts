@@ -338,6 +338,7 @@ export type Upcoming = Node & Document & {
   title: Scalars['String'];
   description?: Maybe<Scalars['JSON']>;
   status?: Maybe<Scalars['String']>;
+  pinned?: Maybe<Scalars['Boolean']>;
   id: Scalars['ID'];
   _sys: SystemInfo;
   _values: Scalars['JSON'];
@@ -347,6 +348,7 @@ export type UpcomingFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<RichTextFilter>;
   status?: InputMaybe<StringFilter>;
+  pinned?: InputMaybe<BooleanFilter>;
 };
 
 export type UpcomingConnectionEdges = {
@@ -492,6 +494,7 @@ export type UpcomingMutation = {
   title?: InputMaybe<Scalars['String']>;
   description?: InputMaybe<Scalars['JSON']>;
   status?: InputMaybe<Scalars['String']>;
+  pinned?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type PostPartsFragment = { __typename?: 'Post', title: string, body?: any | null, pubDate?: string | null, coverImage?: string | null, coverImageAlt?: string | null, tags?: Array<string | null> | null, draft?: boolean | null };
@@ -500,7 +503,7 @@ export type WorkPartsFragment = { __typename?: 'Work', title: string, body?: any
 
 export type StaticPartsFragment = { __typename?: 'Static', title: string, body?: any | null };
 
-export type UpcomingPartsFragment = { __typename?: 'Upcoming', title: string, description?: any | null, status?: string | null };
+export type UpcomingPartsFragment = { __typename?: 'Upcoming', title: string, description?: any | null, status?: string | null, pinned?: boolean | null };
 
 export type PostQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -564,7 +567,7 @@ export type UpcomingQueryVariables = Exact<{
 }>;
 
 
-export type UpcomingQuery = { __typename?: 'Query', upcoming: { __typename?: 'Upcoming', id: string, title: string, description?: any | null, status?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type UpcomingQuery = { __typename?: 'Query', upcoming: { __typename?: 'Upcoming', id: string, title: string, description?: any | null, status?: string | null, pinned?: boolean | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type UpcomingConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']>;
@@ -576,7 +579,7 @@ export type UpcomingConnectionQueryVariables = Exact<{
 }>;
 
 
-export type UpcomingConnectionQuery = { __typename?: 'Query', upcomingConnection: { __typename?: 'UpcomingConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'UpcomingConnectionEdges', cursor: string, node?: { __typename?: 'Upcoming', id: string, title: string, description?: any | null, status?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type UpcomingConnectionQuery = { __typename?: 'Query', upcomingConnection: { __typename?: 'UpcomingConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'UpcomingConnectionEdges', cursor: string, node?: { __typename?: 'Upcoming', id: string, title: string, description?: any | null, status?: string | null, pinned?: boolean | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export const PostPartsFragmentDoc = gql`
     fragment PostParts on Post {
@@ -606,6 +609,7 @@ export const UpcomingPartsFragmentDoc = gql`
   title
   description
   status
+  pinned
 }
     `;
 export const PostDocument = gql`
