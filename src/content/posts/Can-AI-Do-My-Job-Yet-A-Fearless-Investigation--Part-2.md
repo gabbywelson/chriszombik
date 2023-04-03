@@ -1,6 +1,9 @@
 ---
 title: Can AI Do My Job Yet? A Fearless Investigation – Part 2
 draft: true
+pubDate: '2023-04-03T04:00:00.000Z'
+tags:
+  - AI
 ---
 
 # Part 2: What is "my job"?
@@ -21,11 +24,11 @@ I should clarify that I obviously do "know" what work my job entails, inasmuch a
 
 So, here are the roles I occupy and broad tasks that comprise them (aka my "jobs"). They are presented in order of spiritual importance to me (and, incidentally, reverse order of how well they pay):
 
-### 1. **Fiction Writer**
+### 1. Fiction Writer
 
 This one feels self explanatory—I make stuff up and write it down. I consider replacing this "job" off the table for the purposes of this investigation. Yes, GPT-4 can produce large volumes of prose on demand. It can even produce original ideas, or sufficiently original remixes of ideas it has trained on. Some people may find these capabilities helpful in their fiction writing. But for me, the appeal of making art is *making* the art. The process of thinking up my own ideas and figuring out how to express them is a big reason *why* I do it. **I don't want a machine to write my fiction for me, for the same reason I don't want another human to write my fiction for me**. Hence, I will not be attempting to use ChatGPT for fiction writing at this time.\[^1]
 
-### 2. **Memoir collaborator**
+### 2. Memoir collaborator
 
 This one is a little more sophisticated. In this role, I am not only writer, but a project manager. My collaborator has a fascinating life story, which he has conveyed to me over the course of a number of lengthy interviews. I, in turn, have a vision of how to convey that life story in the form of a 300-400 page book. Our workflow basically goes like this:
 
@@ -39,13 +42,13 @@ This one is a little more sophisticated. In this role, I am not only writer, but
 
 Of all these steps, #6 is the only one I think GPT-4 could realistically help with. It is time consuming and fairly mechanical. Moreover, it ought to be possible to train GPT-4 on my Obsidian notes, feed it my outlines, and have it spit out rough drafts of the chapters I need. Regrettably, wrangling the OpenAI API to do this would require programming expertise than I currently do not possess. It would also be a little unethical\[^2]. **I might explore this someday, but it is out of scope for this series.**
 
-### 3. **Independent education consultant**
+### 3. Independent education consultant
 
 This is by far the most complex of my jobs. For the purposes of this investigation I wish to set aside the administrative work that all self-employed people have to deal with—I am not prepared to replace my human lawyer or accountant with an AI, nor do I wish to use ChatGPT to shop for health insurance. I will also not be using ChatGPT for sales/marketing. There is no question that I *could* use ChatGPT in this way if I wanted to grow my business. However, in recent years, 100% of my clients have come to me through my network rather than through any advertising on my part. So advertising simply isn't one of my goals right now.
 
 That leaves the service aspect of my job. Once I am set up to work with a student, the deliverable is basically "all of the student's college application essays, plus maybe their Common App activities list and a resume, and a couple hours of interview practice if they want it." This deliverable is produced through an open-ended number of meetings\[^3], during which I get to know the student and then coach them through brainstorming, planning, drafting, and editing their essays and other application materials.
 
-The "human interaction" part of this work—namely, interviewing the students about their life experiences in order to surface good ideas for their essays, and then coaching them to write those ideas down in a coherent way—probably would not be made more efficient by AI. But what if we had a completely different workflow? It could be vastly more efficient if, instead of waiting for the student to draft essays for homework and then email them to me, I simply used ChatGPT to create rough drafts of my students' essays without their input. Similarly, it would be much more efficient for me to use ChatGPT to read student work and provide feedback on it, or revise it, instead of doing that sort of thing myself.
+The "human interaction" part of this work—namely, interviewing the students about their life experiences in order to surface good ideas for their essays, and then coaching them to write those ideas down in a coherent way—probably would not be made more efficient by AI. But what if we had a completely different workflow? It could be vastly more efficient if, instead of waiting for the student to draft essays for homework and then email them to me, I simply used ChatGPT to create rough drafts of my students' essays without their input. Similarly, it would be much more efficient for me to use ChatGPT to read student work and provide feedback on it, or revise it, instead of doing that sort of thing myself.
 
 Of course, using ChatGPT like this would be *extremely* unethical.
 
