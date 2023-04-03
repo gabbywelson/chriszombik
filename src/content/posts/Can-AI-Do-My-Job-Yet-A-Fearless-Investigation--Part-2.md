@@ -5,6 +5,8 @@ draft: true
 
 # Part 2: What is "my job"?
 
+This post is part of a series. You can read Part 1 \[here]\([https://www.chriszombik.com/blog/can-ai-do-my-job-yet-a-fearless-investigation--part-1](https://www.chriszombik.com/blog/can-ai-do-my-job-yet-a-fearless-investigation--part-1 "")).
+
 ## I. Job Title
 
 If you look at my Tinder bio, it says I'm a "Writer." If you ask me in person, I'll tell you I'm a writer, too. And, now, that you've asked, we might talk about what I'm writing. I'm editing my first novel, I'll tell you. But mainly right now I'm working on a memoir. No, not my own memoir—the memoir of a business associate from China. And then it will probably come up that I lived in Shanghai for almost five years, and *then* it will come to light that the job I did there, which I still do part-time, and which actually pays my bills, is "education consultant." And when you press me on what *that* is, I'll say: "I help Chinese families send their kids to American colleges."
@@ -49,6 +51,6 @@ Of course, using ChatGPT like this would be *extremely* unethical.
 
 I'm going to try it anyway.
 
-\[^1] Obviously, there *are* lots of ways ChatGPT could aid me in fiction writing. I could ask it to generate summary visual descriptions for various characters and places, or spit out 25 imaginary character names within given parameters. In fact, I may well end up using ChatGPT in the latter way, in the same way I already use [various](https://www.thisworddoesnotexist.com/ "") [sites](https://fakelish.nwtgck.org/ "") as sources of phonic inspiration when I need to come up with a fictional name or word. But when I talk about getting AI to "do my job," I am talking first and foremost about getting it to do some of the painful, time-consuming aspects of my work. Coming up with a name only takes minutes. I'm trying to save *hours*.
+\[^1] Obviously, there *are* lots of ways ChatGPT could aid me in fiction writing. I could ask it to generate summary visual descriptions for various characters and places, or spit out 25 imaginary character names within given parameters. In fact, I may well end up using ChatGPT in the latter way, in the same way I already use [various](https://www.thisworddoesnotexist.com/ "This word does not exist") [sites](https://fakelish.nwtgck.org/ "Fakelish") as sources of phonic inspiration when I need to come up with a fictional name or word. But when I talk about getting AI to "do my job," I am talking first and foremost about getting it to do some of the painful, time-consuming aspects of my work. Coming up with a name only takes minutes. I'm trying to save *hours*.
 \[^2] If you haven't already guessed, I consider the ethical issue of passing off GPT-4's writing as my own—or more specifically my clients' own—to be *the* defining question behind this entire project. I aim to address this question in the conclusion to this series.
 \[^3] Also, emails.
