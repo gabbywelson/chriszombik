@@ -1,6 +1,6 @@
 ---
 title: Can AI Do My Job Yet? A Fearless Investigation – Part 2
-draft: true
+draft: false
 pubDate: '2023-04-03T04:00:00.000Z'
 tags:
   - AI
