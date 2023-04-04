@@ -64,17 +64,21 @@ const tagList = tags?.join(", ");
           <div class="italic">
             <span class="font-bold">Other posts about: </span>
             <ul class="list-none list-outside m-0 p-0 flex flex-row">
-              {tagList.split(",").map((tag, idx, tagList) => (
-                <li class="mr-2 first:mx-0 first:mr-2 p-0">
-                  <a
-                    href={`/blog/tags/${tag.trim()}`}
-                    aria-label={`Pages tagged ${tag}`}
-                  >
-                    {tag}
-                  </a>
-                  {idx !== tagList.length - 1 && <span class="ml-2"> ~ </span>}
-                </li>
-              ))}
+              {tagList
+                .split(",")
+                .map((tag: string, idx: number, tagList: string[]) => (
+                  <li class="mr-2 first:mx-0 first:mr-2 p-0">
+                    <a
+                      href={`/blog/tags/${tag.trim()}`}
+                      aria-label={`Pages tagged ${tag}`}
+                    >
+                      {tag}
+                    </a>
+                    {idx !== tagList.length - 1 && (
+                      <span class="ml-2"> ~ </span>
+                    )}
+                  </li>
+                ))}
             </ul>
           </div>
         )
