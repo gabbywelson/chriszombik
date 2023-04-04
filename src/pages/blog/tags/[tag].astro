@@ -7,10 +7,10 @@ export async function getStaticPaths() {
   const uniqueTags = [
     ...new Set(blogEntries.map((post) => post.data.tags).flat()),
   ];
-  const filteredTags = uniqueTags.filter((tag) => !!tag);
+  const filteredTags = uniqueTags?.filter((tag) => !!tag);
   return filteredTags.map((tag) => {
     const filteredPosts = blogEntries
-      .filter((post) => post.data.tags?.includes(tag) && !post.data.draft)
+      .filter((post) => post.data.tags?.includes(tag!) && !post.data.draft)
       .sort(function (a, b) {
         return +new Date(b.data.pubDate) - +new Date(a.data.pubDate);
       });
@@ -32,7 +32,7 @@ const pageTitle = `Posts tagged '${tag}'`;
     </h2>
     <ul role="list" class="list-disc list-inside">
       {
-        posts.map((blogPostEntry) => (
+        posts.map((blogPostEntry: any) => (
           <li class="underline">
             <a href={`/blog/${blogPostEntry.slug}`}>
               <span class="font-bold">{blogPostEntry.data.title.trim()}</span>
