@@ -9,9 +9,11 @@ export async function getStaticPaths() {
   ];
   const filteredTags = uniqueTags.filter((tag) => !!tag);
   return filteredTags.map((tag) => {
-    const filteredPosts = blogEntries.filter(
-      (post) => post.data.tags?.includes(tag) && !post.data.draft
-    );
+    const filteredPosts = blogEntries
+      .filter((post) => post.data.tags?.includes(tag) && !post.data.draft)
+      .sort(function (a, b) {
+        return +new Date(b.data.pubDate) - +new Date(a.data.pubDate);
+      });
     return {
       params: { tag },
       props: { posts: filteredPosts, tag },
