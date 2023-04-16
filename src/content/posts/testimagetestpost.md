@@ -12,4 +12,4 @@ Horny for vscode
 
 inline image forthcoming
 
-![Image of my screen on a sunday afternoon](/testimagehooray.png)
+![Image of my screen on a sunday afternoon](/testimagehooray.png "Image of my screen etc etc")
