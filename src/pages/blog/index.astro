@@ -7,8 +7,7 @@ const entriesToRender = blogEntries
   .filter((post) => !post.data.draft)
   .sort(function (a, b) {
     return +new Date(b.data.pubDate) - +new Date(a.data.pubDate);
-  })
-  .slice(0, 3);
+  });
 import formatDate from "../../../utils/formatDate";
 ---
 
