@@ -4,7 +4,7 @@ pubDate: '2023-03-31T04:00:00.000Z'
 draft: false
 tags:
   - AI
-  - Technology
+  - CAIDMJY
 ---
 
 # "AI is coming for our jobs"?
