@@ -7,7 +7,7 @@ tags:
   - CAIDMJY
 ---
 
-*This post is part of a series. You can read Part 1 [here](https://www.chriszombik.com/blog/can-ai-do-my-job-yet-a-fearless-investigation--part-1 "").*
+*This post is part of a [series](https://www.chriszombik.com/blog/tags/CAIDMJY "Can AI Do My Job Yet?"). You can read Part 1 [here](https://www.chriszombik.com/blog/can-ai-do-my-job-yet-a-fearless-investigation--part-1 "CAIDMJY Part 1").*
 
 # What is "my job"?
 
