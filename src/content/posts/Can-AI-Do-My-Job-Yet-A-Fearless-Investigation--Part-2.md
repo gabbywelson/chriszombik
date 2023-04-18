@@ -7,9 +7,9 @@ tags:
   - CAIDMJY
 ---
 
-# Part 2: What is "my job"?
-
 *This post is part of a series. You can read Part 1 [here](https://www.chriszombik.com/blog/can-ai-do-my-job-yet-a-fearless-investigation--part-1 "").*
+
+# What is "my job"?
 
 ## I. Job Title
 
