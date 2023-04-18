@@ -1,6 +1,6 @@
 ---
 title: Too Much "Generative," Not Enough "AI"
-draft: true
+draft: false
 pubDate: '2023-04-18T17:00:00.000Z'
 tags:
 - AI
