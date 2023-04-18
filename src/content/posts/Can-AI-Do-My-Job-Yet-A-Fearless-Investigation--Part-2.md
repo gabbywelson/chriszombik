@@ -4,6 +4,7 @@ draft: false
 pubDate: '2023-04-03T04:00:00.000Z'
 tags:
   - AI
+  - CAIDMJY
 ---
 
 # Part 2: What is "my job"?
