@@ -69,7 +69,7 @@ Why might this be? The answer is simple. Apps are (virtual) appliances. Their in
 
 But an assistant? You don't need to learn how to "use" them in quite the same way. A good assistant will learn how you work, and how best to work for you. This is possible because an assistant has a *mind*.
 
-As of April 2023, ChatGPT is in no way ready to act as anyone's secretary or executive assistant[^2]. But I would submit to you that, much as a personal assistant is a human mind riding around in a human body, ChatGPT is a GPT-4 mind riding around in a chatbot body. It is no mere appliance, with inflexible rules of use you must obey. It can learn to serve you, in sophisticated and interesting ways, if only you deign to teach it.
+As of April 2023, ChatGPT is in no way ready to act as anyone's secretary or executive assistant.[^2] But I would submit to you that, much as a personal assistant is a human mind riding around in a human body, ChatGPT is a GPT-4 mind riding around in a chatbot body. It is no mere appliance, with inflexible rules of use you must obey. It can learn to serve you, in sophisticated and interesting ways, if only you deign to teach it.
 
 ### Prompts Engineering
 
