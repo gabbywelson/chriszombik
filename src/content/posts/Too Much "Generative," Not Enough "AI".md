@@ -103,10 +103,10 @@ You probably see where I'm going with this.
 
 Yeah so anyway I outsourced my executive function to ChatGPT:
 
-[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](chatgpt priority tracker sc1.png)
-[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](chatgpt priority tracker sc2.png)
-[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](chatgpt priority tracker sc3.png)
-[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](chatgpt priority tracker sc4.png)
+[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](/blog/chatgpt priority tracker sc1.png)
+[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](/blog/chatgpt priority tracker sc2.png)
+[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](/blog/chatgpt priority tracker sc3.png)
+[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](/blog/chatgpt priority tracker sc4.png)
 
 I would say this is a successful, if quite a rudimentary, proof of concept. It does what I had in mind, better than I expected. This approach is obviously limited by the fact that ChatGPT is a chatbot and can only provide outputs on command—a far cry from a human sitting next to me and independently nudging me whenever I lose focus. But it's closer to my vision than, say, a to-do list app. With this approach, all I have to do is keep ChatGPT open in a browser tab, and build the tiny habit of regularly looking at that tab. This feels like a big improvement over looking at a to-do list. Looking at a to-do list feels like opening the hatch on my mental submarine. ChatGPT is like a periscope.
 
@@ -153,10 +153,10 @@ I've been hearing about the imminent arrival of [no-code development](https://en
 
 All of this is to say, we are in the very, *very* early days of AI. The constraints are still so tight, the limitations so easy to hit. I expect that to change. And we should be excited. Everyone could benefit from a having a tireless, cooperative, intelligent assistant helping them through everyday life.
 
-[^1] That said, getting ChatGPT to spit out the text you want is not necessarily "easy." 
+[^1]: That said, getting ChatGPT to spit out the text you want is not necessarily "easy." 
 
-[^2] I see no technical obstacle to such interfaces to LLMs being built in the relatively near future. Check back in 2026—I bet once they hook GPT-N up to Alexa and Siri we'll see some real progress on this.
+[^2]: I see no technical obstacle to such interfaces to LLMs being built in the relatively near future. Check back in 2026—I bet once they hook GPT-N up to Alexa and Siri we'll see some real progress on this.
 
-[^3] Also notwithstanding that GPT-4 is "non-deterministic," i.e. its outputs have a little bit of randomness so that if you give it the same prompt 10 times it might give you 10 slightly different responses.
+[^3]: Also notwithstanding that GPT-4 is "non-deterministic," i.e. its outputs have a little bit of randomness so that if you give it the same prompt 10 times it might give you 10 slightly different responses.
 
-[^4] I swear to God I always thought the quote was "for the mind" but evidently not.
+[^4]: I swear to God I always thought the quote was "for the mind" but evidently not.
