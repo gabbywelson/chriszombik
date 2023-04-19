@@ -103,10 +103,10 @@ You probably see where I'm going with this.
 
 Yeah so anyway I outsourced my executive function to ChatGPT:
 
-[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](/blog/chatgpt priority tracker sc1.png)
-[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](/blog/chatgpt priority tracker sc2.png)
-[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](/blog/chatgpt priority tracker sc3.png)
-[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](/blog/chatgpt priority tracker sc4.png)
+[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](/blog/chatgptprioritytrackersc1.png)
+[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](/blog/chatgptprioritytrackersc2.png)
+[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](/blog/chatgptprioritytrackersc3.png)
+[Screenshot of part of a conversation with ChatGPT in which the user asks ChatGPT to record and modify a list of priorities](/blog/chatgptprioritytrackersc4.png)
 
 I would say this is a successful, if quite a rudimentary, proof of concept. It does what I had in mind, better than I expected. This approach is obviously limited by the fact that ChatGPT is a chatbot and can only provide outputs on command—a far cry from a human sitting next to me and independently nudging me whenever I lose focus. But it's closer to my vision than, say, a to-do list app. With this approach, all I have to do is keep ChatGPT open in a browser tab, and build the tiny habit of regularly looking at that tab. This feels like a big improvement over looking at a to-do list. Looking at a to-do list feels like opening the hatch on my mental submarine. ChatGPT is like a periscope.
 
