@@ -122,8 +122,8 @@ I haven't used GPT-4 directly through the API, but I suspect this is an artifact
 
 Second, and more interesting to me, the logic that ChatGPT uses to contruct its responses seems to prioritize mechanical literalness over any sort of "natural" communication style. This is seen in cases where it repeats the same information multiple times in short order:
 
-[Screenshot of part of a conversation with ChatGPT in which the AI repeats itself in the course of a brief response](chatgpt priority tracker sc5.5.png)
-[Screenshot of part of a conversation with ChatGPT in which the AI repeats itself in the course of a brief response](chatgpt priority tracker sc6.png)
+![Screenshot of part of a conversation with ChatGPT in which the AI repeats itself in the course of a brief response](/blog/chatgptprioritytrackersc5.5.png)
+![Screenshot of part of a conversation with ChatGPT in which the AI repeats itself in the course of a brief response](/blog/chatgptprioritytrackersc6.png)
 
 I did instruct the bot to *always* end its messages by restating the current top priority—in this sense, the bot is functioning as intended. But these example messages are unnatural and clearly silly. This is a good reminder that, as intelligent as ChatGPT appears, it is still very much a computer program, and behaves in computer program-y ways.
 
