@@ -116,7 +116,7 @@ You will notice that I did put some effort into "engineering" the initial prompt
 
 I encountered a couple of amusing limitations in this project. First, the bot loves to remind me about its willingness to help, despite my repeated requests that it not do so:
 
-[Screenshot of part of a conversation with ChatGPT in which the AI offers to be helpful despite the user telling it this is not necessary to do](chatgpt priority tracker sc5.png)
+![Screenshot of part of a conversation with ChatGPT in which the AI offers to be helpful despite the user telling it this is not necessary to do](/blog/chatgptprioritytrackersc5.png)
 
 I haven't used GPT-4 directly through the API, but I suspect this is an artifact of how OpenAI has programmed the ChatGPT chatbot's default "personality," rather than an inherent feature of the GPT-4 LLM.
 
