@@ -1,6 +1,7 @@
 ---
 title: Now
 ---
+## Now
 
 This is a [now page](https://nownownow.com/about) inspired by [Derek Sivers](https://sive.rs/nowff) and others. I made it so that instead of reading my posts on social media you can read this page instead.
 
