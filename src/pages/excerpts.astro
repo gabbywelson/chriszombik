@@ -1,8 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Works";
+const pageTitle = "Excerpts";
 import { getCollection } from "astro:content";
-const works = await getCollection("works");
+const excerpts = await getCollection("excerpts");
 import truncate from "../../utils/truncate";
 ---
 
@@ -11,15 +11,15 @@ import truncate from "../../utils/truncate";
     <h2
       class="font-bold font-serif text-xl mb-4 pb-0.5 mb-1 border-b-2 border-b-slate-200"
     >
-      Selected Works
+      Excerpts
     </h2>
     <ul role="list">
       {
-        works.map((selectedWork) => (
+        excerpts.map((selectedWork) => (
           <li class="border-2 rounded-lg border-slate-500 bg-slate-100 p-4">
-            <a href={`/works/${selectedWork.slug}`}>
+            <a href={`/excerpts/${selectedWork.slug}`}>
               <div class="mb-2">
-                <span class="font-bold underline text-lg">
+                <span class="font-bold font-serif underline text-lg">
                   {selectedWork.data.title}
                 </span>
               </div>

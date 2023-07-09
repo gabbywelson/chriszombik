@@ -21,7 +21,9 @@ import formatDate from "../../../utils/formatDate";
         entriesToRender.map((blogPostEntry) => (
           <li class="underline">
             <a href={`/blog/${blogPostEntry.slug}`}>
-              <span class="font-bold">{blogPostEntry.data.title.trim()}</span>
+              <span class="font-bold font-serif">
+                {blogPostEntry.data.title.trim()}
+              </span>
               <span>
                 (Posted
                 <time datetime={blogPostEntry.data.pubDate}>

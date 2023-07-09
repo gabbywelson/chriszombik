@@ -17,7 +17,7 @@ const staticSchema = defineCollection({
   })
 });
 
-const worksSchema = defineCollection({
+const excerptsSchema = defineCollection({
   schema: z.object({
     title: z.string()
   })
@@ -35,6 +35,6 @@ const upcomingSchema = defineCollection({
 export const collections = {
   'posts': blogCollection,
   'static': staticSchema,
-  'works': worksSchema,
+  'excerpts': excerptsSchema,
   'upcoming': upcomingSchema
 };
