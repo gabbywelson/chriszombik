@@ -18,6 +18,9 @@ const onWorks = currentPath.includes("works") || currentPath === "works/";
   <li class={onWorks ? "underline p-1" : "p-1"}>
     <a href="/works/">Selected Works</a>
   </li>
+  <li class={currentPath === "now/" ? "underline p-1" : "p-1"}>
+    <a href="/now/">Now</a>
+  </li>
   <li class={currentPath === "contact/" ? "underline p-1" : "p-1"}>
     <a href="/contact/">Contact</a>
   </li>

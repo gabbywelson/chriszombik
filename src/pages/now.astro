@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getEntryBySlug } from "astro:content";
+const pageTitle = "Now";
+
+const nowPage = await getEntryBySlug("static", "now");
+const { Content } = await nowPage.render();
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <div class="w-full flex flex-col items-center">
+    <div class="prose max-w-s mx-3 mt-4">
+      <Content />
+    </div>
+  </div>
+</BaseLayout>
