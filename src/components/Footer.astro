@@ -6,11 +6,24 @@ import twitter from "../images/icons/twitter.svg";
 <footer
   class="flex flex-col md:flex-row mt-8 mb-2 md:max-w-[90ch] md:w-[90ch] md:mx-auto px-2 md:px-0"
 >
-  <div class="flex">
-    <div>© {date} Christopher Zombik</div>
-    <a class="ml-1" href="https://twitter.com/chriszombik">
-      <img class="h-4 w-4" src={twitter} alt="Twitter logo" />
-    </a>
+  <div class="flex flex-col md:flex-row">
+    <div class="mr-2">© {date} Christopher Zombik <span class="hidden md:inline">•</span></div>
+    <div class="mr-2" >Follow me at:</div>
+    <ul class="flex">
+      <li class=" font-bold mr-2 md:mx-2" >
+        <a class="flex flex-row items-baseline relative" href="https://twitter.com/chriszombik">
+          <span class="mr-1 underline">Twitter</span>
+          <span>&nbsp; &nbsp;</span>
+          <img class="h-4 w-4 absolute -right-1 top-1" src={twitter} alt="Twitter logo" />
+        </a>
+      </li>
+      <li class="underline font-bold mx-2" >
+        <a class="flex" href="https://bsky.app/profile/chriszombik.com">
+          <span class="mr-1">Bluesky</span>
+          <span aria-label="square emoji representing the Blueksy logo">🟦</span>
+        </a>
+      </li>
+    </ul>
   </div>
   <div class="md:ml-auto">
     Designed by <a class="font-bold underline" href="https://welson.net"
