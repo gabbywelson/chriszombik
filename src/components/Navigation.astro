@@ -12,11 +12,14 @@ const onWorks = currentPath.includes("works") || currentPath === "works/";
   <li class={currentPath === "about/" ? "underline p-1" : "p-1"}>
     <a href="/about/">About</a>
   </li>
+  <li class={currentPath === "now/" ? "underline p-1" : "p-1"}>
+    <a href="/now/">Now</a>
+  </li>
   <li class={onBlog ? "underline p-1" : "p-1"}>
     <a href="/blog/">Blog</a>
   </li>
   <li class={onWorks ? "underline p-1" : "p-1"}>
-    <a href="/works/">Selected Works</a>
+    <a href="/works/">Excerpts</a>
   </li>
   <li class={currentPath === "contact/" ? "underline p-1" : "p-1"}>
     <a href="/contact/">Contact</a>
