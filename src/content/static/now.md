@@ -1,11 +1,11 @@
 ---
 title: Now
 ---
-## Now
+# Now
 
 This is a [now page](https://nownownow.com/about) inspired by [Derek Sivers](https://sive.rs/nowff) and others. I made it so that instead of reading my posts on social media you can read this page instead.
 
-*Last updated July 9, 2023.*
+*Last updated July 10, 2023.*
 
 ### Life
 
@@ -31,11 +31,13 @@ Prior to this I read [_Children of Time_](https://www.goodreads.com/book/show/25
 
 Prior to _that_ I read [_Inhibitor Phase_](https://www.goodreads.com/en/book/show/56072402) by Alastair Reynolds (⭐️⭐️⭐️). For what it's worth this is apparently book 4 in a series that I had not read any prior books in; that really took away from some of my comprehension and undermined my appreciation of certain parts where I knew _something_ significant was happening but couldn't figure out what. Still, the writing left something to be desired. This book could be the poster child for why "just make your first 50 pages as good as possible" might be bad writing advice, even if it helps you sell your book.
 
+It occurs to me that my reading diet is easily summarized as "fifty percent books people read in high school, fifty percent books whose covers depict an alien planet with some lens flare."
+
 #### Watching
 
 I just finished watching [_PsychOdyssey_](https://www.youtube.com/playlist?list=PLIhLvue17Sd70y34zh2erWWpMyOnh4UN), a YouTube docuseries about the making of the video game _Psychonauts 2_. Tied with [_The Beatles: Get Back_](https://en.wikipedia.org/wiki/The_Beatles:_Get_Back) for best overall documentary and best documentary about the realities of doing creative work that I've ever seen. It made me really curious about the video game industry.
 
-I also watched half of [Glass Onion](https://www.imdb.com/title/tt11564570/) the other night and wouldn't mind finishing it, though movies don't typically hold my attention for whatever reason.
+I also watched half of [_Glass Onion_](https://www.imdb.com/title/tt11564570/) the other night and wouldn't mind finishing it, though movies don't typically hold my attention for whatever reason.
 
 The Red Sox are in last place in the AL East and yet I think they have a completely plausible path to the playoffs through the Wild Card due to an easy schedule in July and August. I'm just saying, watch this space.
 
