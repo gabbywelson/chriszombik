@@ -27,7 +27,7 @@ const pageTitle = `Posts tagged '${tag}'`;
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="w-full h-full">
-    <h2 class="font-bold pb-0.5 mb-1 border-b-2 border-b-slate-200">
+    <h2 class="font-bold pb-0.5 mb-1 border-b-2 border-b-slate-200 font-serif">
       {pageTitle}
     </h2>
     <ul role="list" class="list-disc list-inside">
@@ -35,7 +35,9 @@ const pageTitle = `Posts tagged '${tag}'`;
         posts.map((blogPostEntry: any) => (
           <li class="underline">
             <a href={`/blog/${blogPostEntry.slug}`}>
-              <span class="font-bold">{blogPostEntry.data.title.trim()}</span>
+              <span class="font-bold font-serif">
+                {blogPostEntry.data.title.trim()}
+              </span>
               <span>
                 (Posted
                 <time datetime={blogPostEntry.data.pubDate}>
