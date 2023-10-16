@@ -27,22 +27,24 @@ Next up is "Menewood" by Nicola Griffith. "Hild," (⭐️⭐️⭐️⭐️⭐�
 
 My reading diet is easily summarized as "fifty percent books people read in high school, fifty percent books whose covers depict an alien planet with some lens flare."
 
-#### Watching
+### Watching
 
 Playoff baseball mainly. My Red Sox (⭐️) second half prediction looked good at first but didn't pan out as they completely collapsed down the stretch. Now I'm rooting for... I don't know, I guess the Phillies? Although I'll watching as much of every remaining game as I can with great interest.
 
 On the second leg of my flight back from Bali I watched all three _Lord of the Rings_ films (⭐️⭐️⭐️) for the first time. The first one was great. The latter two were kind of a chore. I don't fully get the hype but I'm glad that I can now understand a lot more memes and references, a mere twenty years after everyone else.
 
-#### Listening
+### Listening
 
 I continue to binge [The History of Byzantium](https://thehistoryofbyzantium.com/), amongst my more usual rotation of comedic/tech/indie talk show podcasts. It is an absolutely worthy successor to [The History of Rome](https://thehistoryofrome.typepad.com/), which I finished last year. Music-wise I've been enjoying a lot of _Stone Temple Pilots_ and adjacent bands.
 
 I tend to only listen to music in social situations or at the gym. Otherwise I favor podcasts. Music is definitely more relaxing; the mental resources needed to consume a podcast are non-trivial and some days I hit a wall where I just don't want to listen to podcasts anymore.
 
-#### Playing
+### Playing
 
 I beat _Tears of the Kingdom_ (⭐️⭐️⭐️⭐️⭐️) a couple months ago and put it down to try other things. I tried _Hollow Knight_ (⭐️⭐) because it came so highly recommended from all the people whose video game taste I trust and found it way, way too difficult, by which I mean I felt totally helpless and could not figure out how to progress. My feeling about video games is that if I can't figure out what I'm supposed to do without looking up a walkthrough online, then the game isn't worth my time. I'm not averse to looking up specific puzzle solutions or mechanics if I'm stuck and otherwise know the way forward, but if the entire game blocks me from having fun at every turn without explanation or hints, I'm just going to quit. So I'm back to playing TotK as just a brainless "run around and gradually work towards 100%ing it" game, the way I used to play BotW.
 
 Despite it being specifically my shit, I am actively avoiding _Baldur's Gate_ because I fear that if I start playing I'll disappear and never be seen again.
 
 If space opens up in my life for a more involved game experience I might go check out _Dark Souls 3_. But right now I'm mainly just waiting for the _Elden Ring_ DLC to drop.
+
+Oh, and I continue to run a homebrew D&D 5E campaign called _Castle Zania_ for a party of three friends. Four players feels like a really magical number for D&D. You lose some of the chaotic fun of a bigger group, but the game just runs so much more smoothly in all other ways.
