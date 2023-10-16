@@ -1,6 +1,6 @@
 ---
 title: THE NOVEL
-status: 'Drafted, currently editing.'
+status: 'Drafted, edit pending.'
 pinned: true
 ---
 
