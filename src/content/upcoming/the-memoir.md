@@ -1,6 +1,6 @@
 ---
 title: THE MEMOIR
-status: Early draft.
+status: Second draft.
 pinned: false
 ---
 
