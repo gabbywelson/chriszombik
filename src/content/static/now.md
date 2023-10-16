@@ -5,46 +5,42 @@ title: Now
 
 This is a [now page](https://nownownow.com/about) inspired by [Derek Sivers](https://sive.rs/nowff) and others. I made it so that instead of reading my posts on social media you can read this page instead.
 
-*Last updated July 10, 2023.*
+*Last updated October 16, 2023.*
 
 ### Life
 
-I live in Somerville, MA and work remotely from home and various nearby cafes. My community is extremely walkable and safe. Two years in, living in greater Boston is growing on me. The weather leaves a lot to be desired but the general level of human development is very high and the social fabric is stronger than other places I've been in the USA (still far weaker than in most other countries I've been to, of course). I've been doing a lot of gardening with my roommate, which is quite satisfying.
+I did a great deal of traveling in the past two months. I went on an Alaska cruise with my family (⭐️⭐️⭐️—to the cruise, not my family!), and then spent a month in Bali, Indonesia (⭐️⭐️⭐️⭐️—the area I was staying was very crowded and dirty and everything is under construction, but I got to hang out with my friends and go to the beach a lot) with a one-week jaunt up to Shanghai, China (still ⭐️⭐️⭐️⭐️⭐️ after all these years, the metro is just *chef's kiss*) to take care of some business as well. Now I'm back home in Somerville, MA trying to put my life back together. To give you an idea of how long I've been away, I forgot how to work the blinds in my bedroom.
 
-I feel optimistic about life overall. My physical health, mental health, social life, and work life have all been trending up in 2023. I have been cultivating mindfulness with 15 minutes of meditation most mornings and a general effort to pay more attention to the moment. The general idea is to observe the thoughts and judgments that rush into my mind as existing at some distance from my core "self." When I catch my attention wandering to unwanted places, I gently and with the utmost self-compassion return it to a place of equanimity and ease. I am no expert but this is really working for me. I reliably fit this in using a morning checklist that I wrote on my bedroom whiteboard and follow by moving a magnet down beside each item as I work through it.
-
-Exercise has become more important to me than at any point since before Covid. [This blog post](https://www.raptitude.com/2023/04/the-best-deal-in-the-world-right-now/) really landed for me, specifically: "In fact, it is possible to get into great shape doing only things that are fun for you." I like to go on a vigorous ~1 hour hike in Middlesex Fells after work three days per week, plus calisthenics. If it rains I hit the exercise bike, which is less fun but still gets the sweat going and the heart rate up. I would exercise even more if I had a better handle on time. As it stands now, I feel like I have to steal those 1-2 hours, 3-4 days per week, just to get what feels like the minimum exercise to keep my body and brain happy (["Ultimately morale is physical. You think with your body, so it's important to take care of it"](http://paulgraham.com/greatwork.html)).
-
-Speaking of time, a problem I continuously grapple with is that I don't see any way that a person can have a normal (weekday) social existence, work and exercise daily, and still get 8 hours of sleep (the minimum for me to be effective). If you are awake for 16 hours and spend 8 on work, 2 on exercise, 2 on eating and hygiene, that leaves 4 hours per day for literally all errands, chores, commuting, interruptions, distractions, personal downtime, and socializing that might enter your life. The math simply doesn't work. I live in a state of perpetual, low-level frustration due to this fact. Imagine having kids. I think the solution is "not to prioritize what's on your schedule, but to schedule your priorities," as Stephen Covey says. This is _the_ fundamental challenge for those of us with ADHD.
+I came back to New England in early October to beautiful, cool fall weather. In the few years I've been back in the States, I don't recall such a truly crisp, autumny fall as this. Yesterday I hiked Mt. Kearsarge in NH (⭐️⭐️⭐️⭐️⭐️, very pretty, only almost died sliding on wet rocks a couple times) to see the foliage and get some fresh air. Really a wonderful feeling. I think we're in for a cold winter, which it feels like we haven't really had in a while.
 
 ### Work
 
-I'm hard at work assembling the manuscript of the memoir. We've done a lot of work in the last 7 months and the story we have to tell kicks ass. I'm excited to see what other people think of it. Aiming to wrap up this phase of the project by end of August and move on to finding a publisher.
-
-My fiction work has been on ice for six months as I single-tasked the memoir. This is lowkey killing me but the only way out is through. I am looking forward to participating in the International Three Day Novel Contest again in September.
+I continue to work hard on the memoir. We are getting closer but it's just so hard to stay motivated. I have so many ideas for new fiction projects I want to do and it feels like I can't get to them because of this huge thing I've committed to that needs to get finished first. A few of the people I've told about this project have excitedly told me that once this book succeeds I will have a great platform to ghost-write memoirs for lots of other wealthy Chinese people. I am here to tell you that after this project I hope to never write non-fiction ever again, or at least not for a long time.
 
 ### Reading
 
-I am currently reading [_Siddhartha_](https://www.goodreads.com/book/show/52036.Siddhartha) by Hermann Hesse. For some reason the Kindle edition I got is overflowing with typos which may or may not be translation errors. I'm still enjoying it though. Much easier "falling asleep" reading than what I read last.
+Just finished Adrian Tchaikovsky's "Children of Memory," (⭐️⭐️⭐️⭐️⭐️) the latest (final?) book in his "Children of" series. I don't know how he did it but somehow this entry topped both of the previous two books in the series for me. When it got to the final act and everything suddenly changed, I was worried that he had lost control somehow, but then he brought it around in a way that rocked my world and had me muttering to myself, "This guy is a genius."
 
-Prior to this I read [_Children of Time_](https://www.goodreads.com/book/show/25499718-children-of-time) by Adrian Tchaikovsky (⭐️⭐️⭐️⭐️⭐️). The most exciting sci-fi I've read since [_The Expanse_](https://www.goodreads.com/series/56399-the-expanse) series and the smartest I've read since the [_Mars_ Trilogy](https://www.goodreads.com/series/40710-mars-trilogy).
+Next up is "Menewood" by Nicola Griffith. "Hild," (⭐️⭐️⭐️⭐️⭐️⭐️) to which this is a sequel, might be the single most amazing book I've ever read. High expectations for the sequel. It is a very _big_ book that opens with three maps, a family tree, and a dramatis personae of what feels like 100 characters.
 
-Prior to _that_ I read [_Inhibitor Phase_](https://www.goodreads.com/en/book/show/56072402) by Alastair Reynolds (⭐️⭐️⭐️). For what it's worth this is apparently book 4 in a series that I had not read any prior books in; that really took away from some of my comprehension and undermined my appreciation of certain parts where I knew _something_ significant was happening but couldn't figure out what. Still, the writing left something to be desired. This book could be the poster child for why "just make your first 50 pages as good as possible" might be bad writing advice, even if it helps you sell your book.
-
-It occurs to me that my reading diet is easily summarized as "fifty percent books people read in high school, fifty percent books whose covers depict an alien planet with some lens flare."
+My reading diet is easily summarized as "fifty percent books people read in high school, fifty percent books whose covers depict an alien planet with some lens flare."
 
 #### Watching
 
-I just finished watching [_PsychOdyssey_](https://www.youtube.com/playlist?list=PLIhLvue17Sd70y34zh2erWWpMyOnh4UN), a YouTube docuseries about the making of the video game _Psychonauts 2_. Tied with [_The Beatles: Get Back_](https://en.wikipedia.org/wiki/The_Beatles:_Get_Back) for best overall documentary and best documentary about the realities of doing creative work that I've ever seen. It made me really curious about the video game industry.
+Playoff baseball mainly. My Red Sox (⭐️) second half prediction looked good at first but didn't pan out as they completely collapsed down the stretch. Now I'm rooting for... I don't know, I guess the Phillies? Although I'll watching as much of every remaining game as I can with great interest.
 
-I also watched half of [_Glass Onion_](https://www.imdb.com/title/tt11564570/) the other night and wouldn't mind finishing it, though movies don't typically hold my attention for whatever reason.
-
-The Red Sox are in last place in the AL East and yet I think they have a completely plausible path to the playoffs through the Wild Card due to an easy schedule in July and August. I'm just saying, watch this space.
+On the second leg of my flight back from Bali I watched all three _Lord of the Rings_ films (⭐️⭐️⭐️) for the first time. The first one was great. The latter two were kind of a chore. I don't fully get the hype but I'm glad that I can now understand a lot more memes and references, a mere twenty years after everyone else.
 
 #### Listening
 
-I've been binging [The History of Byzantium](https://thehistoryofbyzantium.com/), amongst my more usual rotation of comedic/tech/indie talk show podcasts. It is an absolutely worthy successor to [The History of Rome](https://thehistoryofrome.typepad.com/), which I finished last year.
+I continue to binge [The History of Byzantium](https://thehistoryofbyzantium.com/), amongst my more usual rotation of comedic/tech/indie talk show podcasts. It is an absolutely worthy successor to [The History of Rome](https://thehistoryofrome.typepad.com/), which I finished last year. Music-wise I've been enjoying a lot of _Stone Temple Pilots_ and adjacent bands.
+
+I tend to only listen to music in social situations or at the gym. Otherwise I favor podcasts. Music is definitely more relaxing; the mental resources needed to consume a podcast are non-trivial and some days I hit a wall where I just don't want to listen to podcasts anymore.
 
 #### Playing
 
-Somehow I already have over 60 hours in _Tears of the Kingdom_ after starting it barely three weeks ago. This is a huge problem lol.
+I beat _Tears of the Kingdom_ (⭐️⭐️⭐️⭐️⭐️) a couple months ago and put it down to try other things. I tried _Hollow Knight_ (⭐️⭐) because it came so highly recommended from all the people whose video game taste I trust and found it way, way too difficult, by which I mean I felt totally helpless and could not figure out how to progress. My feeling about video games is that if I can't figure out what I'm supposed to do without looking up a walkthrough online, then the game isn't worth my time. I'm not averse to looking up specific puzzle solutions or mechanics if I'm stuck and otherwise know the way forward, but if the entire game blocks me from having fun at every turn without explanation or hints, I'm just going to quit. So I'm back to playing TotK as just a brainless "run around and gradually work towards 100%ing it" game, the way I used to play BotW.
+
+Despite it being specifically my shit, I am actively avoiding _Baldur's Gate_ because I fear that if I start playing I'll disappear and never be seen again.
+
+If space opens up in my life for a more involved game experience I might go check out _Dark Souls 3_. But right now I'm mainly just waiting for the _Elden Ring_ DLC to drop.
