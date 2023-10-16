@@ -17,6 +17,8 @@ I came back to New England in early October to beautiful, cool fall weather. In 
 
 I continue to work hard on the memoir. We are getting closer but it's just so hard to stay motivated. I have so many ideas for new fiction projects I want to do and it feels like I can't get to them because of this huge thing I've committed to that needs to get finished first. A few of the people I've told about this project have excitedly told me that once this book succeeds I will have a great platform to ghost-write memoirs for lots of other wealthy Chinese people. I am here to tell you that after this project I hope to never write non-fiction ever again, or at least not for a long time.
 
+As in prior years I am working with a few Chinese and Chinese-emigrant students on college and grad school admissions essays. A year ago I was certain I wanted to quit this line of work. Now, I've made a lot of improvements to my workflow that have made the job less cumbersome and more rewarding, and I feel really grateful that I have such a flexible and satisfying gig to support my lifestyle and creative work.
+
 ### Reading
 
 Just finished Adrian Tchaikovsky's "Children of Memory," (⭐️⭐️⭐️⭐️⭐️) the latest (final?) book in his "Children of" series. I don't know how he did it but somehow this entry topped both of the previous two books in the series for me. When it got to the final act and everything suddenly changed, I was worried that he had lost control somehow, but then he brought it around in a way that rocked my world and had me muttering to myself, "This guy is a genius."
