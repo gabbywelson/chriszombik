@@ -5,7 +5,7 @@ title: Now
 
 This is a [now page](https://nownownow.com/about) inspired by [Derek Sivers](https://sive.rs/nowff) and others. I made it so that instead of reading my posts on social media you can read this page instead.
 
-*Last updated April 29, 2023.*
+*Last updated April 29, 2024.*
 
 ### Life
 
