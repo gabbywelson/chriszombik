@@ -1,4 +1,3 @@
-
 ---
 title: Notes on the Elden Ring DLC
 pubDate: '2024-06-29T10:08:00.000Z'
