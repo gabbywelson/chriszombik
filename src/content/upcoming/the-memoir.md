@@ -1,6 +1,6 @@
 ---
 title: THE MEMOIR
-status: Editing.
+status: Querying.
 pinned: false
 ---
 
