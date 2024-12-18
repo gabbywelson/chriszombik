@@ -2,6 +2,19 @@
 
 Personal site for author Christopher Zombik
 
+# Content Updating Workflow
+
+1. Download [Github Desktop](https://desktop.github.com/download/) and "clone" the `chriszombik` repo into a folder on your machine (it can go wherever, typically I choose the home directory or `Documents`)
+2. Update any of the files in the `/src/content` folder or add new blog post files by copying an existing file and adding new content
+3. In **Github Desktop**, create a new branch with any arbitrary name. Select the files you have changed/added/deleted and "commit" them to this new branch
+4. Select the option to "push" the branch you just created to "origin" (which is just github.com)
+5. Go to [the chriszombik repo on github.com](https://github.com/garrettwelson/chriszombik) and you should see a banner saying your branch name has recent commits and inviting you to open a "pull request"
+6. Click "compare and pull request" and go into the pull request (PR) that is created
+7. After about a minute, you'll see an automatically generated comment on the PR from `vercel` with a link to preview your changes
+8. Make sure the changes look as you expect
+9. When satisifed, click the `merge` button at the bottom of the pull request. It will be merged into the `main` branch and the new site will deploy
+
+
 # Site Owner's Manual
 
 ## Frontend
@@ -26,11 +39,6 @@ The files are laid out according to this rough structure. In general, you should
 ### Styling
 
 The site's styling is done using [Tailwind.css](https://tailwindcss.com), which is an extremely popular framework that provides "utility classes" for CSS. You'll notice that there are no CSS files I've defined in the project. Everything comes from Tailwind, and basically each style I wish to apply gets its own class. This is a controversial approach, but for single-developer projects like this it makes a lot of sense, and Tailwind is a widely used tool with rich support that will be around for a long time.
-
-## Content Management
-
-This is handled by a free + open source tool called [Tina CMS](https://tina.io) , which is partially local and partially cloud-based. The **"database"** for Tina is just Git/GitHub (this very repo!). The stuff in `/src/content/` is what Tina is aware of, and it will see files there and files created through Tina's UI will live there. 
-
 
 ## Source Control
 
